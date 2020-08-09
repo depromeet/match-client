@@ -9,12 +9,14 @@ import { store } from "../../store";
 import { Map } from "../Map";
 import { Sidebar } from "../Sidebar";
 import { MainInput } from "../MainInput";
+import { FloatingButton } from "components/FloatingButton";
 
 const AppComponent = () => {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <S.Container>
+          <FloatingButton />
           <Sidebar />
           <Map />
           <MainInput />
