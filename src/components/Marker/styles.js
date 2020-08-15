@@ -11,6 +11,7 @@ export const Container = styled.div`
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 2px;
 
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -33,4 +34,5 @@ export const Pin = styled(PinSVG)`
 
 	width: 24px;
 	height: 24px;
+
 `;

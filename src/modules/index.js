@@ -7,6 +7,7 @@ const rootReducer = combineReducers({
 	map,
 	study,
 	selected,
+
 });
 
 export default rootReducer;

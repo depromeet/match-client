@@ -14,6 +14,7 @@ const MarkerComponent = (props) => {
 			<S.Container onClick={() => onSelect(props)} selected={selected}>
 				{title}
 			</S.Container>
+
 			<S.Pin />
 		</Marker>
 	);
