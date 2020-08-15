@@ -4,6 +4,7 @@ import ReactMapGL from "react-map-gl";
 import { MainInput } from "../MainInput";
 import { Marker } from "../Marker";
 import { useMap } from "hooks/useMap";
+import { useStudy } from "hooks/useStudy";
 
 const TOKEN =
 	"pk.eyJ1IjoibmFhbW9vbm9vIiwiYSI6ImNrZDc3cDd3cTJud2wyeW15ajdnbnpxancifQ.Cfz9n6pSdx77lOZ0kU3nJQ";
@@ -11,15 +12,13 @@ const TOKEN =
 
 const MapComponent = () => {
 	const { viewport, setViewport } = useMap();
+	const { study } = useStudy();
 
 	const renderMarker = () => {
-		return (
-			<Marker
-				latitude={37.5326}
-				longitude={127.024612}
-				title={"노션으로 일잘러되기"}
-			/>
-		);
+		return study.map((studyInfo) => (
+			<Marker {...studyInfo} key={studyInfo.id} />
+		));
+
 	};
 
 	return (

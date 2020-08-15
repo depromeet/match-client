@@ -1,18 +1,19 @@
 import React from "react";
 import * as S from "./styles";
 import { Marker } from "react-map-gl";
+import { useSelected } from "../../hooks/useSelected";
 
+const MarkerComponent = (props) => {
+	const { id, latitude, longitude, title } = props;
+	const { selectedStudy, onSelect } = useSelected();
+	const selected = selectedStudy && selectedStudy.id === id;
 
-const MarkerComponent = ({latitude,
-	longitude,
-	title}) => {
 	return (
-		<Marker
-			latitude={latitude}
-			longitude={longitude}
-		>
-			<S.Image src="https://pds.joins.com/news/component/htmlphoto_mmdata/201501/15/htm_20150115153754c010c011.gif" />
-			<S.Container>{title}</S.Container>
+		<Marker latitude={latitude} longitude={longitude}>
+			<S.Container onClick={() => onSelect(props)} selected={selected}>
+				<S.Text>{title}</S.Text>
+			</S.Container>
+
 			<S.Pin />
 		</Marker>
 	);
