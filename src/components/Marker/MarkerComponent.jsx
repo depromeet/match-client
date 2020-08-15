@@ -2,7 +2,6 @@ import React from "react";
 import * as S from "./styles";
 import { Marker } from "react-map-gl";
 import { useSelected } from "../../hooks/useSelected";
-import { ReactComponent as Pin } from "../../assets/images/pin.svg";
 
 const MarkerComponent = (props) => {
 	const { id, latitude, longitude, title } = props;
@@ -12,7 +11,7 @@ const MarkerComponent = (props) => {
 	return (
 		<Marker latitude={latitude} longitude={longitude}>
 			<S.Container onClick={() => onSelect(props)} selected={selected}>
-				{title}
+				<S.Text>{title}</S.Text>
 			</S.Container>
 			<S.Pin />
 		</Marker>

@@ -15,6 +15,19 @@ export const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 
+	text-align: center;
+	text-transform: capitalize;
+	transform: perspective(1px) translateZ(0);
+
+	transition: all 150ms ease;
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.03);
+	}
+`;
+
+export const Text = styled.p`
 	font-weight: 600;
 	font-size: 10px;
 	line-height: 12px;
