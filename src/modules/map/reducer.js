@@ -9,9 +9,9 @@ const initialState = {
 	zoom: 10,
 };
 
-const basket = createReducer(initialState, {
+const map = createReducer(initialState, {
 	[MOVE_MAP]: (state, { payload }) => ({ ...state, ...payload }),
 	[UPDATE_MAP]: (state, { payload }) => ({ ...state, ...payload }),
 });
 
-export default basket;
+export default map;
