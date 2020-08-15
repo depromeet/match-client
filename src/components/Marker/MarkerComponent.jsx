@@ -13,6 +13,7 @@ const MarkerComponent = (props) => {
 			<S.Container onClick={() => onSelect(props)} selected={selected}>
 				<S.Text>{title}</S.Text>
 			</S.Container>
+
 			<S.Pin />
 		</Marker>
 	);

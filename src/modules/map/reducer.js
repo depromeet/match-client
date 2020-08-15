@@ -10,8 +10,10 @@ const initialState = {
 };
 
 const map = createReducer(initialState, {
+
 	[MOVE_MAP]: (state, { payload }) => ({ ...state, ...payload }),
 	[UPDATE_MAP]: (state, { payload }) => ({ ...state, ...payload }),
 });
 
 export default map;
+
