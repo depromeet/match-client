@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Maven+Pro&display=swap');
@@ -18,6 +18,7 @@ export default createGlobalStyle`
 	  &:focus,
 	  &:active{outline:none}
     border: none;
+    outline:none;
     -webkit-appearance: none;
     -moz-appearance: none;
   }
