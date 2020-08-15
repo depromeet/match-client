@@ -8,18 +8,16 @@ import { store } from "../../store";
 
 import { Map } from "../Map";
 import { Sidebar } from "../Sidebar";
-import { MainInput } from "../MainInput";
-import { FloatingButton } from "components/FloatingButton";
+import { MainTab } from "components/MainTab";
 
 const AppComponent = () => {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <S.Container>
-          <FloatingButton />
           <Sidebar />
+          <MainTab/>
           <Map />
-          <MainInput />
         </S.Container>
       </ThemeProvider>
     </Provider>
