@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchStudy } from "modules/study";
+import API from "../api";
 
 export const useStudy = (init = false) => {
 	const dispatch = useDispatch();
@@ -10,7 +11,22 @@ export const useStudy = (init = false) => {
 		init && getStudy();
 	}, [init]);
 
-	const getStudy = () => dispatch(fetchStudy);
+	// {
+	// 	latitude = 37.5555764,
+	// 	longitude = 127.0078127,
+	// 	offset = 0,
+	// 	limit = 20,
+	// }
+	const getStudy = async () => {
+		const { response } = await API.getStudy({
+			latitude: 37.5555764,
+			longitude: 127.0078127,
+			offset: 0,
+			limit: 20,
+		});
+		console.log(response);
+		dispatch(fetchStudy(response));
+	};
 
 	return {
 		study,

@@ -4,13 +4,12 @@ import { BoxStudy } from "components/BoxStudy";
 import { useStudy } from "hooks/useStudy";
 
 const StudyListComponent = () => {
-	const { study } = useStudy();
+	const { study } = useStudy(true);
 
 	const renderStudy = () => {
 		return study.map((item) => <BoxStudy {...item} key={item.id} />);
 	};
 
-	console.log("klist rendered");
 	return (
 		<S.Container>
 			<S.Title>DISCOVER</S.Title>
