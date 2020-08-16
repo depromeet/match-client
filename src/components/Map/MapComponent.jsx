@@ -18,9 +18,9 @@ const MapComponent = () => {
 		return study.map((studyInfo) => (
 			<Marker {...studyInfo} key={studyInfo.id} />
 		));
-
 	};
 
+	console.log(viewport);
 	return (
 		<S.Container>
 			<ReactMapGL

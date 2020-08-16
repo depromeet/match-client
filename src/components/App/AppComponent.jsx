@@ -10,16 +10,30 @@ import { Map } from "../Map";
 import { Sidebar } from "../Sidebar";
 
 const AppComponent = () => {
+  // <<<<<<< HEAD
+  //   return (
+  //     <Provider store={store}>
+  //       <ThemeProvider theme={theme}>
+  //         <S.Container>
+  //           <Sidebar />
+  //           <Map />
+  //         </S.Container>
+  //       </ThemeProvider>
+  //     </Provider>
+  //   );
+  // =======
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <S.Container>
           <Sidebar />
           <Map />
+          <S.Logo />
         </S.Container>
       </ThemeProvider>
     </Provider>
   );
+  //>>>>>>> master
 };
 
 export default AppComponent;
