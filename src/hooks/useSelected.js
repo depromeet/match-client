@@ -5,6 +5,9 @@ export const useSelected = () => {
 	const dispatch = useDispatch();
 	const selectedStudy = useSelector((state) => state.selected);
 
+	const isSelected = (study) =>
+		selectedStudy ? selectedStudy.id === study.id : false;
+
 	const onSelect = (newStudy) => {
 		if (!selectedStudy) {
 			return dispatch(selectStudy(newStudy));
@@ -18,5 +21,6 @@ export const useSelected = () => {
 	return {
 		selectedStudy,
 		onSelect,
+		isSelected,
 	};
 };
