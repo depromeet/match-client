@@ -8,6 +8,7 @@ const MarkerComponent = (props) => {
 	const { onSelect, isSelected } = useSelected();
 	const selected = isSelected(props);
 
+
 	return (
 		<Marker latitude={latitude} longitude={longitude}>
 			<S.Container onClick={() => onSelect(props)} selected={selected}>
