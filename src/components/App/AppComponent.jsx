@@ -8,7 +8,6 @@ import { store } from "../../store";
 
 import { Map } from "../Map";
 import { Sidebar } from "../Sidebar";
-import { MainTab } from "components/MainTab";
 
 const AppComponent = () => {
   return (
@@ -16,7 +15,6 @@ const AppComponent = () => {
       <ThemeProvider theme={theme}>
         <S.Container>
           <Sidebar />
-          <MainTab/>
           <Map />
         </S.Container>
       </ThemeProvider>
