@@ -7,8 +7,8 @@ export const useStudy = (init = false) => {
 	const study = useSelector((state) => state.study);
 
 	useEffect(() => {
-		getStudy();
-	});
+		init && getStudy();
+	}, [init]);
 
 	const getStudy = () => dispatch(fetchStudy);
 
