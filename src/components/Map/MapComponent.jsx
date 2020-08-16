@@ -20,7 +20,6 @@ const MapComponent = () => {
 		));
 	};
 
-	console.log(viewport);
 	return (
 		<S.Container>
 			<ReactMapGL

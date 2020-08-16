@@ -14,15 +14,22 @@ export const Container = styled.div`
 	flex-direction: column;
 	padding: 15px 20px;
 
+	text-decoration: none;
+
 	transition: all 150ms ease;
 	position: relative;
+
+	cursor: pointer;
 `;
 
 export const Scehdule = styled.div`
 	font-size: 16px;
 	line-height: 22px;
+	text-decoration: none;
 `;
 export const Title = styled.div`
+	text-decoration: none;
+
 	font-weight: 800;
 	font-size: 24px;
 	line-height: 33px;
@@ -34,7 +41,7 @@ export const Bookmark = styled(BookmarkIcon)`
 	right: 25px;
 
 	border-color: ${(props) => (props.selected ? "#17181B" : "#FBFCFF")};
-	fill: ${(props) => props.marked && "#FBFCFF"};
+	${({ marked }) => (marked === 0 ? { fill: "#FBFCFF" } : null)}
 `;
 
 export const Paticipant = styled.div`

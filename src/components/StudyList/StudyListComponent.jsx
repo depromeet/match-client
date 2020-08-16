@@ -10,13 +10,12 @@ const StudyListComponent = () => {
 		return study.map((item) => <BoxStudy {...item} key={item.id} />);
 	};
 
+	console.log("klist rendered");
 	return (
 		<S.Container>
 			<S.Title>DISCOVER</S.Title>
-			<S.StudyContainer>
-				<S.BottomBlur />
-				{renderStudy()}
-			</S.StudyContainer>
+			<S.StudyContainer>{renderStudy()}</S.StudyContainer>
+			<S.BottomBlur />
 		</S.Container>
 	);
 };
