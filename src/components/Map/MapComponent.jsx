@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./styles";
 import ReactMapGL from "react-map-gl";
 import { MainInput } from "../MainInput";
 import { Marker } from "../Marker";
 import { useMap } from "hooks/useMap";
 import { useStudy } from "hooks/useStudy";
+import { CheckBox } from "components/CheckBox";
+import { FilterBox } from "components/FilterBox";
 
 const TOKEN =
 	"pk.eyJ1IjoibmFhbW9vbm9vIiwiYSI6ImNrZDc3cDd3cTJud2wyeW15ajdnbnpxancifQ.Cfz9n6pSdx77lOZ0kU3nJQ";
@@ -12,7 +14,8 @@ const TOKEN =
 
 const MapComponent = () => {
 	const { viewport, setViewport } = useMap();
-	const { study } = useStudy();
+	const [checked, setChecked] = useState(false);
+	const { study, getStudy } = useStudy();
 
 	const renderMarker = () => {
 		return study.map((studyInfo) => (
@@ -20,9 +23,20 @@ const MapComponent = () => {
 		));
 	};
 
+	const onMoveMapHandler = (viewportProps) => {
+		setViewport(viewportProps);
+		if (checked) {
+			const {
+				lngLat: [longitude, latitude],
+			} = viewportProps;
+			getStudy({ latitude, longitude });
+		}
+	};
+
 	return (
 		<S.Container>
 			<ReactMapGL
+				onMouseUp={onMoveMapHandler}
 				mapboxApiAccessToken={TOKEN}
 				{...viewport}
 				onViewportChange={setViewport}
@@ -30,7 +44,9 @@ const MapComponent = () => {
 			>
 				{renderMarker()}
 			</ReactMapGL>
+			<CheckBox checked={checked} setChecked={setChecked} />
 			<MainInput />
+			<FilterBox />
 		</S.Container>
 	);
 };

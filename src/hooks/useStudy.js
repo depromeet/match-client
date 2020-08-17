@@ -8,23 +8,19 @@ export const useStudy = (init = false) => {
 	const study = useSelector((state) => state.study);
 
 	useEffect(() => {
-		init && getStudy();
+		init && getStudy({});
 	}, [init]);
 
-	// {
-	// 	latitude = 37.5555764,
-	// 	longitude = 127.0078127,
-	// 	offset = 0,
-	// 	limit = 20,
-	// }
-	const getStudy = async () => {
+	const getStudy = async ({
+		latitude = 37.5555764,
+		longitude = 127.0078127,
+	}) => {
 		const { response } = await API.getStudy({
-			latitude: 37.5555764,
-			longitude: 127.0078127,
+			latitude,
+			longitude,
 			offset: 0,
 			limit: 20,
 		});
-		console.log(response);
 		dispatch(fetchStudy(response));
 	};
 

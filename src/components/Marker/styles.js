@@ -22,8 +22,11 @@ export const Container = styled.div`
 	transition: all 150ms ease;
 	cursor: pointer;
 
+	transform: ${({ selected }) => (selected ? "scale(1.1)" : "")};
 	&:hover {
-		transform: scale(1.05);
+		/* background: #40fff4;
+		color: #17181b; */
+		transform: scale(1.1);
 	}
 `;
 

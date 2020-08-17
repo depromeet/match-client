@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-const url = " http://3.34.250.163:8080";
+const url = "http://15.165.191.68:8080";
 const apiConfig = "/api";
 const baseURL = `${url}${apiConfig}`;
 

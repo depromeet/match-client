@@ -1,16 +1,23 @@
 import React from "react";
 import * as S from "./styles";
-import { useLocation } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { StudyList } from "components/StudyList";
-import { BoxStudy } from "components/BoxStudy";
-import { Sidebar } from "components/Sidebar";
-import { useStudy } from "hooks/useStudy";
+import { CategoryList } from "components/CategoryList";
 
 const MainTabComponent = ({ match }) => {
 	return (
 		<S.Container>
-			<Route path={"/study"} component={StudyList} />
+			<Route
+				path={"/study"}
+				render={() => (
+					<>
+						<StudyList />
+						<CategoryList />
+					</>
+				)}
+			/>
+			{/* <Route path={"/study"} component={CategoryList} /> */}
+			{/* <Route path={"/study"} component={CategoryList} /> */}
 			{/* <Route path={match.path} exact component={StudyList} /> */}
 		</S.Container>
 	);
