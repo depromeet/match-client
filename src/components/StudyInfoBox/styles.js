@@ -26,7 +26,7 @@ export const Title = styled.div`
   display: flex;
   align-items: center;
   text-transform: uppercase;
-
+  font-family: Montserrat;
   color: #fbfcff;
 `;
 export const StudyTitle = styled.div`

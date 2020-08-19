@@ -4,6 +4,7 @@ import * as S from "./styles";
 import { CleanLink } from "components/CleanLink";
 import { useSelected } from "hooks/useSelected";
 import { useForm } from "react-hook-form";
+import { createGlobalStyle } from "../../styles/globalStyle";
 
 const StudyInfoBoxComponent = () => {
   const { register, handleSubmit } = useForm();
@@ -11,6 +12,7 @@ const StudyInfoBoxComponent = () => {
 
   return (
     <S.Container>
+      <createGlobalStyle />
       <S.Title>CREATE</S.Title>
       <S.Box />
       <S.StudyTitle>스터디 내용</S.StudyTitle>
