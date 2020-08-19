@@ -4,10 +4,22 @@ export const Container = styled.div`
   position: relative;
   height: 60%;
 `;
+export const Form = styled.form``;
+
+export const Box = styled.div`
+  position: absolute;
+  width: 390px;
+  height: 470px;
+  left: 20px;
+  top: 80px;
+  background: #373c4a;
+  border-radius: 2px;
+`;
 
 export const Title = styled.div`
-  position: sticky;
-  margin: 20px 20px;
+  position: absolute;
+  top: 40px;
+  left: 20px;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
@@ -17,12 +29,27 @@ export const Title = styled.div`
 
   color: #fbfcff;
 `;
-export const StudyTitle = styled.input`
+export const StudyTitle = styled.div`
   position: absolute;
-  left: 10px;
-  top: 11.89%;
+  left: 50px;
+  top: 104px;
+
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #40fff4;
+`;
+export const TitleInput = styled.input`
+  position: absolute;
+  left: 50px;
+  top: 126px;
   background: #373c4a;
-  //border-style: none;
+  border-style: none;
   font-family: Noto Sans;
   font-style: normal;
   font-weight: 800;
@@ -31,23 +58,23 @@ export const StudyTitle = styled.input`
   display: flex;
   align-items: center;
   text-transform: capitalize;
-
-  /* text_white */
-
   color: #fbfcff;
 `;
-export const StudyContent = styled.textarea`
+export const ContentInput = styled.textarea`
   position: absolute;
   width: 320px;
-  height: 274px;
-  left: 10px;
-  top: 175px;
-  background: #373c4a;
+  height: 310px;
+  left: 50px;
+  top: 190px;
   font-family: Noto Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 20px;
+  text-transform: capitalize;
+  color: #fbfcff;
+  background-color: #373c4a;
+  border-style: none;
 `;
 export const Calendar = styled.div``;
 export const StartTime = styled.div``;
@@ -60,7 +87,6 @@ export const CreateBtn = styled.button`
   height: 60px;
   left: 30px;
   top: 980px;
-  /* match_blue */
 
   background: #40fff4;
   border-radius: 2px;
@@ -71,8 +97,8 @@ export const CalendarIcon = styled.div``;
 
 export const HR = styled.hr`
   position: absolute;
-  top: 160px;
-  left: 10px;
+  top: 170px;
+  left: 50px;
   width: 330px;
   border: 1px dashed #596072;
 `;
