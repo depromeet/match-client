@@ -5,6 +5,7 @@ import { CleanLink } from "components/CleanLink";
 import { useSelected } from "hooks/useSelected";
 import { useForm } from "react-hook-form";
 import { createGlobalStyle } from "../../styles/globalStyle";
+import { DatePicker } from "components/DatePicker";
 
 const StudyInfoBoxComponent = () => {
   const { register, handleSubmit } = useForm();
@@ -22,14 +23,12 @@ const StudyInfoBoxComponent = () => {
         <S.ContentInput />
         <S.CreateBtn type="submit">스터디 열기</S.CreateBtn>
       </S.Form>
-
+      <S.CalBox />
       <S.CalendarIcon />
-      <S.Calendar />
+      <DatePicker />
 
       <S.StartTime />
       <S.EndTime />
-      <S.MaxParticipants />
-      <S.Tag />
     </S.Container>
   );
 };

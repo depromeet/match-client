@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactComponent as CalendarSVG } from "assets/images/calendar.svg";
 
 export const Container = styled.div`
   position: relative;
@@ -76,11 +77,26 @@ export const ContentInput = styled.textarea`
   background-color: #373c4a;
   border-style: none;
 `;
-export const Calendar = styled.div``;
+export const CalBox = styled.div`
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  left: 20px;
+  top: 564px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  z-index: 2;
+`;
+export const CalendarIcon = styled(CalendarSVG)`
+  position: absolute;
+  top: 579px;
+  left: 38px;
+`;
+
 export const StartTime = styled.div``;
 export const EndTime = styled.div``;
-export const MaxParticipants = styled.input``;
-export const Tag = styled.input``;
+// export const MaxParticipants = styled.input``;
+// export const Tag = styled.input``;
 export const CreateBtn = styled.button`
   position: absolute;
   width: 260px;
@@ -93,7 +109,6 @@ export const CreateBtn = styled.button`
   border-style: none;
   color: black;
 `;
-export const CalendarIcon = styled.div``;
 
 export const HR = styled.hr`
   position: absolute;
