@@ -22,7 +22,7 @@ const BoxStudyComponent = (props) => {
 	};
 
 	return (
-		<CleanLink to={`/stduy/${props.id}`}>
+		<CleanLink to={`/study/${props.id}`}>
 			<S.Container
 				onMouseEnter={() => onSelect(props)}
 				onMouseLeave={() => onSelect(props)}
