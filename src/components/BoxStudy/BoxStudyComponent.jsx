@@ -7,35 +7,35 @@ import { CleanLink } from "components/CleanLink";
 import { participants } from "../../modules/study/reducer";
 
 const BoxStudyComponent = (props) => {
-	const {
-		studyName,
-		duration: { start, end },
-		// participants,
-	} = props;
-	const { onSelect, isSelected } = useSelected();
-	const selected = isSelected(props);
+  const {
+    studyName,
+    duration: { start, end },
+    // participants,
+  } = props;
+  const { onSelect, isSelected } = useSelected();
+  const selected = isSelected(props);
 
-	const renderParticipant = () => {
-		return participants.map((user, idx) => (
-			<S.Profile src={user} idx={idx} key={idx} />
-		));
-	};
+  const renderParticipant = () => {
+    return participants.map((user, idx) => (
+      <S.Profile src={user} idx={idx} key={idx} />
+    ));
+  };
 
-	return (
-		<CleanLink to={`/study/${props.id}`}>
-			<S.Container
-				onMouseEnter={() => onSelect(props)}
-				onMouseLeave={() => onSelect(props)}
-				onClick={() => onSelect(props)}
-				selected={selected}
-			>
-				<S.Scehdule>{`${start} - ${end}`}</S.Scehdule>
-				<S.Title>{studyName}</S.Title>
-				<S.Paticipant>{renderParticipant()}</S.Paticipant>
-				<S.Bookmark selected={selected} marked={props.id % 2} />
-			</S.Container>
-		</CleanLink>
-	);
+  return (
+    <CleanLink to={`/study/${props.id}`}>
+      <S.Container
+        onMouseEnter={() => onSelect(props)}
+        onMouseLeave={() => onSelect(props)}
+        onClick={() => onSelect(props)}
+        selected={selected}
+      >
+        <S.Scehdule>{`${start} - ${end}`}</S.Scehdule>
+        <S.Title>{studyName}</S.Title>
+        <S.Paticipant>{renderParticipant()}</S.Paticipant>
+        <S.Bookmark selected={selected} marked={props.id % 2} />
+      </S.Container>
+    </CleanLink>
+  );
 };
 
 export default BoxStudyComponent;

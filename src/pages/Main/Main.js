@@ -1,20 +1,21 @@
 import React from "react";
 import * as S from "./styles";
-
 import { Map } from "../../components/Map";
 import { Sidebar } from "../../components/Sidebar";
 import { MainTab } from "components/MainTab";
+import { AddTab } from "components/AddTab";
 import { Route } from "react-router-dom";
 
 const Main = ({ match }) => {
-	return (
-		<S.Container>
-			<Sidebar />
-			<Route path={match.path} component={MainTab} />
-			<Map />
-			<S.Logo />
-		</S.Container>
-	);
+  return (
+    <S.Container>
+      <Sidebar />
+      <Route path={match.path} exact component={MainTab} />
+      <Route path={"/add"} component={AddTab} />
+      <Map />
+      <S.Logo />
+    </S.Container>
+  );
 };
 
 export default Main;

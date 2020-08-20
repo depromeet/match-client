@@ -2,12 +2,12 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Maven+Pro&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans&display=swap");
   * {
 	  box-sizing: border-box;
   }
   body {
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,'Montserrat',"Noto Sans",sans-serif;
   }
   a {
 	  color: inherit;
