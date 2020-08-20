@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "react-dates/initialize";
-import { DateRangePicker } from "react-dates";
-import moment from "moment";
+import { SingleDatePicker } from "react-dates";
+//import moment from "moment";
 import styled from "styled-components";
 import "react-dates/lib/css/_datepicker.css";
+import * as S from "./styles";
+
 // import ThemedStyleSheet from "react-with-styles/lib/ThemedStyleSheet";
 // import aphroditeInterface from "react-with-styles-interface-aphrodite";
 // import DefaultTheme from "react-dates/lib/theme/DefaultTheme";
@@ -28,31 +30,36 @@ import "react-dates/lib/css/_datepicker.css";
 //     },
 //   },
 // });
+
 const StyledDatePickerWrapper = styled.div`
-  color {
-    color: "#f5200c";
-  }
+  position: absolute;
+  left: 140px;
+  top: 588px;
+
   & .SingleDatePicker,
   .SingleDatePickerInput {
     .DateInput {
-      width: 100%;
-      height: 40px;
+      width: 100px;
+      height: 19px;
       display: flex;
-
+      border-style: none;
       .DateInput_input {
-        font-size: 1rem;
-        border-bottom: 0;
-        padding: 12px 16px 14px;
+        font-family: Noto Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        color: #fbfcff;
+        background: #1d212c;
+        border-style: none;
       }
     }
 
-    /* .SingleDatePickerInput__withBorder {
-      border-radius: 4px;
+    .SingleDatePickerInput__withBorder {
       overflow: hidden;
-
+      border: 0;
       :hover,
       .DateInput_input__focused {
-        border: 1px solid red;
+        border: none;
       }
 
       .CalendarDay__selected {
@@ -66,7 +73,7 @@ const StyledDatePickerWrapper = styled.div`
       left: 2px;
       /* top: 43px !important;
       left: 2px !important; */
-    // } */
+    }
   }
 `;
 
@@ -76,25 +83,38 @@ const DatePickerComponent = () => {
     endDate: null,
   });
   const [focus, setFocus] = useState(null);
+  const [endFocus, setEndFocus] = useState(null);
 
   const { startDate, endDate } = dateRange;
+  const handleOnStartDateChange = (startDate) => setDateRange({ startDate });
 
-  const handleOnDateChange = (startDate, endDate) =>
-    setDateRange({ startDate, endDate });
+  const handleOnEndDateChange = (endDate) => setDateRange({ endDate });
 
   return (
-    <StyledDatePickerWrapper>
-      <DateRangePicker
-        numberOfMonths={1}
-        startdate={startDate}
-        startDateId="start_date_id"
-        enddate={endDate}
-        endDateId="end_date_id"
-        onDateChange={handleOnDateChange}
-        focused={focus}
-        onFocusChange={(focus) => setFocus(focus)}
-      />
-    </StyledDatePickerWrapper>
+    <>
+      <S.StartTitle>Start</S.StartTitle>
+      <StyledDatePickerWrapper>
+        <SingleDatePicker
+          placeholder="날짜 추가"
+          numberOfMonths={2}
+          date={startDate}
+          onDateChange={handleOnStartDateChange}
+          focused={focus}
+          onFocusChange={(focus) => setFocus(focus)}
+        />
+      </StyledDatePickerWrapper>
+      <S.EndTitle>End</S.EndTitle>
+      <S.StyledDatePickerWrapper_SEC>
+        <SingleDatePicker
+          placeholder="날짜 추가"
+          numberOfMonths={2}
+          date={endDate}
+          onDateChange={handleOnEndDateChange}
+          focused={endFocus}
+          onFocusChange={(endFocus) => setEndFocus(endFocus)}
+        />
+      </S.StyledDatePickerWrapper_SEC>
+    </>
   );
 };
 export default DatePickerComponent;
