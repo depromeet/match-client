@@ -162,7 +162,7 @@ export const StartTime = styled.div``;
 export const EndTime = styled.div``;
 export const CreateBtn = styled.button`
   position: absolute;
-  width: 260px;
+  width: 250px;
   height: 60px;
   left: 22px;
   top: 980px;
@@ -170,9 +170,19 @@ export const CreateBtn = styled.button`
   background: #40fff4;
   border-radius: 2px;
   border-style: none;
-  color: black;
+  color: #17181b;
 `;
-
+export const SaveBtn = styled.button`
+  position: absolute;
+  width: 122px;
+  height: 60px;
+  left: 280px;
+  top: 980px;
+  background: #373c4a;
+  border-radius: 2px;
+  border-style: none;
+  color: #fbfcff;
+`;
 export const HR = styled.hr`
   position: absolute;
   top: 170px;

@@ -28,23 +28,36 @@ export const StyledDatePickerWrapper_SEC = styled.div`
       height: 19px;
       display: flex;
       border-style: none;
-
       .DateInput_input {
         font-family: Noto Sans;
         font-style: normal;
         font-weight: 500;
         font-size: 14px;
         color: #fbfcff;
-        border-style: none;
         background: #1d212c;
+        border-style: none;
+      }
+    }
+
+    .SingleDatePickerInput__withBorder {
+      overflow: hidden;
+      border: 0;
+      :hover,
+      .DateInput_input__focused {
+        border: none;
       }
 
-      .SingleDatePicker_picker.SingleDatePicker_picker {
-        top: 43px;
-        left: 2px;
-        /* top: 43px !important;
-      left: 2px !important; */
+      .CalendarDay__selected {
+        background: blue;
+        border: blueviolet;
       }
+    }
+
+    .SingleDatePicker_picker.SingleDatePicker_picker {
+      top: 43px;
+      left: 2px;
+      /* top: 43px !important;
+      left: 2px !important; */
     }
   }
 `;

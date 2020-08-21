@@ -23,6 +23,7 @@ const StudyInfoBoxComponent = () => {
         <S.HR />
         <S.ContentInput />
         <S.CreateBtn type="submit">스터디 열기</S.CreateBtn>
+        <S.SaveBtn>임시저장</S.SaveBtn>
       </S.Form>
 
       <S.FlexBox>
