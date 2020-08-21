@@ -15,7 +15,8 @@ const StudyInfoBoxComponent = () => {
     <S.Container>
       <createGlobalStyle />
       <S.Title>CREATE</S.Title>
-      <S.Box />
+      <S.ContentsBox />
+
       <S.StudyTitle>스터디 내용</S.StudyTitle>
       <S.Form onSubmit={handleSubmit(onSubmit)}>
         <S.TitleInput name="stuff" ref={register} />
@@ -23,8 +24,23 @@ const StudyInfoBoxComponent = () => {
         <S.ContentInput />
         <S.CreateBtn type="submit">스터디 열기</S.CreateBtn>
       </S.Form>
-      <S.CalBox />
-      <S.CalendarIcon />
+
+      <S.FlexBox>
+        <S.CalBox />
+        <S.TimeBox />
+        <S.PinBox />
+        <S.MaxPeopleBox />
+        <S.TagBox />
+      </S.FlexBox>
+
+      <S.FlexIcon>
+        <S.CalendarIcon />
+        <S.TimeIcon />
+        <S.PinIcon />
+        <S.MaxPeopleIcon />
+        <S.TagIcon />
+      </S.FlexIcon>
+
       <DatePicker />
 
       <S.StartTime />
