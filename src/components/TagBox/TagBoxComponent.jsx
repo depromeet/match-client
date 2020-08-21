@@ -9,6 +9,9 @@ const TagBoxComponent = () => {
   const [showList, setShowList] = useState(false);
   const toggleFilterList = () => setShowList(!showList);
   const addSelected = (cate) => {
+    if (selectedCategory.length === 3) {
+      return alert("필터는 최대 3개까지 추가할 수 있습니다");
+    }
     setCategory([...selectedCategory, cate]);
   };
   const removeSelected = (cate) => {

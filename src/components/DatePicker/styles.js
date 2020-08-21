@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StartTitle = styled.div`
   position: absolute;
   left: 100px;
-  top: 588px;
+  top: 608px;
   color: #fbfcff;
   font-weight: 600;
   font-size: 16px;
@@ -13,7 +13,7 @@ export const StartTitle = styled.div`
 export const EndTitle = styled.div`
   position: absolute;
   left: 260px;
-  top: 588px;
+  top: 608px;
   color: #fbfcff;
   font-weight: 600;
   font-size: 16px;
@@ -23,7 +23,7 @@ export const EndTitle = styled.div`
 export const StyledDatePickerWrapper_SEC = styled.div`
   position: absolute;
   left: 300px;
-  top: 588px;
+  top: 608px;
 
   & .SingleDatePicker,
   .SingleDatePickerInput {

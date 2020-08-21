@@ -20,7 +20,7 @@ export const Container = styled.div`
 
   padding: 0 10px;
 
-  color: white;
+  color: #8c8e95;
   display: flex;
   align-items: center;
 `;
@@ -50,7 +50,7 @@ export const Text = styled.div`
 
 export const Add = styled(SearchIcon)`
   position: absolute;
-  left: 260px;
+  left: 300px;
   top: 15px;
   fill: none;
   transition: all 300ms ease;
@@ -62,7 +62,7 @@ export const FilterList = styled.div`
   height: ${({ showList }) => (showList ? "fit-content" : "0px")};
   opacity: ${({ showList }) => (showList ? 1 : 0)};
 
-  padding: 10px 5px;
+  padding: 10px 2px;
   position: fixed;
   width: 248px;
 

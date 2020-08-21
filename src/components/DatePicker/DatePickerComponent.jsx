@@ -34,7 +34,7 @@ import * as S from "./styles";
 const StyledDatePickerWrapper = styled.div`
   position: absolute;
   left: 140px;
-  top: 588px;
+  top: 608px;
 
   & .SingleDatePicker,
   .SingleDatePickerInput {
