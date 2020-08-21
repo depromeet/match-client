@@ -40,9 +40,53 @@ const StudyInfoBoxComponent = () => {
     setValue("reactSelect", selectedOption);
     setReactSelect({ selectedOption });
   };
+  const handleMultiEndChange = (selectedOption) => {
+    setValue("reactSelectEndTime", selectedOption);
+    setReactEndSelect({ selectedOption });
+  };
   const [values, setReactSelect] = useState({
     selectedOption: [],
   });
+  const [endValues, setReactEndSelect] = useState({
+    selectedOption: [],
+  });
+  //react-select style
+  const customStyles = {
+    singleValue: () => ({
+      color: "#FBFCFF",
+      fontFamily: "Noto Sans",
+      fontStyle: "normal",
+      fontWeight: 500,
+      fontSize: "14px",
+    }),
+    indicatorsContainer: () => ({
+      borderStyle: "none",
+    }),
+    control: (base, state) => ({
+      ...base,
+      background: "#1D212C",
+      borderStyle: "none",
+      width: 110,
+      fontSize: "14px",
+      color: "#FBFCFF",
+      //color: state.isSelected ? "#FBFCFF" : "#5B5E67",
+    }),
+    // input: () => ({
+    //   background: "#1E222E",
+    //   width: 70,
+    //   borderStyle: 0,
+    // }),
+    option: (provided, state) => ({
+      ...provided,
+      borderBottom: 0,
+      backgroundColor: "#1E222E",
+      color: state.isSelected ? "#2E8C8E" : "#C4C5CB",
+      //padding: 20,
+    }),
+    // control: () => ({
+    //   //width: 150,
+    // }),
+  };
 
   return (
     <S.Container>
@@ -56,15 +100,32 @@ const StudyInfoBoxComponent = () => {
         <S.HR />
         <S.ContentInput />
         <DatePicker />
-        <Select
-          className="reactSelect"
-          name="filters"
-          placeholder="Filters"
-          value={values.selectedOption}
-          options={options}
-          onChange={handleMultiChange}
-        />
-
+        <S.StartTitle>Start</S.StartTitle>
+        <S.SelDiv>
+          <Select
+            className="reactSelect"
+            name="filters"
+            placeholder="시간 추가"
+            value={values.selectedOption}
+            options={options}
+            onChange={handleMultiChange}
+            styles={customStyles}
+          />
+        </S.SelDiv>
+        <S.EndTitle>End</S.EndTitle>
+        <S.SelDiv_Sec>
+          <Select
+            className="reactSelectEndTime"
+            name="filters"
+            placeholder="시간 추가"
+            value={endValues.selectedOption}
+            options={options}
+            onChange={handleMultiEndChange}
+            styles={customStyles}
+          />
+        </S.SelDiv_Sec>
+        <S.Online>온라인</S.Online>
+        <S.Offline>오프라인</S.Offline>
         <S.CreateBtn type="submit">스터디 열기</S.CreateBtn>
         <S.SaveBtn>임시저장</S.SaveBtn>
       </S.Form>
@@ -90,5 +151,4 @@ const StudyInfoBoxComponent = () => {
     </S.Container>
   );
 };
-
 export default StudyInfoBoxComponent;

@@ -7,6 +7,8 @@ export const StartTitle = styled.div`
   color: #fbfcff;
   font-weight: 600;
   font-size: 16px;
+  font-family: Noto Sans;
+  font-style: normal;
 `;
 export const EndTitle = styled.div`
   position: absolute;
@@ -15,6 +17,8 @@ export const EndTitle = styled.div`
   color: #fbfcff;
   font-weight: 600;
   font-size: 16px;
+  font-family: Noto Sans;
+  font-style: normal;
 `;
 export const StyledDatePickerWrapper_SEC = styled.div`
   position: absolute;

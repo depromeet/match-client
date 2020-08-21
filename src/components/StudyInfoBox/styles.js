@@ -190,3 +190,57 @@ export const HR = styled.hr`
   width: 330px;
   border: 1px dashed #596072;
 `;
+
+export const SelDiv = styled.div`
+  position: absolute;
+  top: 652px;
+  left: 145px;
+`;
+export const SelDiv_Sec = styled.div`
+  position: absolute;
+  top: 652px;
+  left: 303px;
+`;
+
+export const StartTitle = styled.div`
+  position: absolute;
+  top: 660px;
+  left: 100px;
+  color: #fbfcff;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+`;
+export const EndTitle = styled.div`
+  position: absolute;
+  top: 660px;
+  left: 260px;
+  color: #fbfcff;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+`;
+export const Online = styled.div`
+  position: absolute;
+  left: 180px;
+  top: 741px;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #fbfcff;
+`;
+export const Offline = styled.div`
+  position: absolute;
+  left: 258px;
+  top: 741px;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #fbfcff;
+`;
