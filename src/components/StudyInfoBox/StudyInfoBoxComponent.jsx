@@ -46,6 +46,9 @@ const StudyInfoBoxComponent = () => {
     setValue("reactSelect", selectedOption);
     setReactSelect({ selectedOption });
   };
+  const [values, setReactSelect] = useState({
+    selectedOption: [],
+  });
   const handleMultiEndChange = (selectedOption) => {
     setValue("reactSelectEndTime", selectedOption);
     setReactEndSelect({ selectedOption });
@@ -136,6 +139,15 @@ const StudyInfoBoxComponent = () => {
         <S.HR />
         <S.ContentInput />
         <DatePicker />
+        <Select
+          className="reactSelect"
+          name="filters"
+          placeholder="Filters"
+          value={values.selectedOption}
+          options={options}
+          onChange={handleMultiChange}
+        />
+
         <S.StartTitle>Start</S.StartTitle>
         <S.SelDiv>
           <Select
