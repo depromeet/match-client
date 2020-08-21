@@ -3,23 +3,27 @@ import styled from "styled-components";
 export const StartTitle = styled.div`
   position: absolute;
   left: 100px;
-  top: 588px;
+  top: 608px;
   color: #fbfcff;
   font-weight: 600;
   font-size: 16px;
+  font-family: Noto Sans;
+  font-style: normal;
 `;
 export const EndTitle = styled.div`
   position: absolute;
   left: 260px;
-  top: 588px;
+  top: 608px;
   color: #fbfcff;
   font-weight: 600;
   font-size: 16px;
+  font-family: Noto Sans;
+  font-style: normal;
 `;
 export const StyledDatePickerWrapper_SEC = styled.div`
   position: absolute;
   left: 300px;
-  top: 588px;
+  top: 608px;
 
   & .SingleDatePicker,
   .SingleDatePickerInput {

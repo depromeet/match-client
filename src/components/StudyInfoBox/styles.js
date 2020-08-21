@@ -5,10 +5,7 @@ import { ReactComponent as PinSVG } from "assets/images/pinIcon.svg";
 import { ReactComponent as PersonSVG } from "assets/images/person.svg";
 import { ReactComponent as TagSVG } from "assets/images/tag.svg";
 
-export const Container = styled.div`
-  position: relative;
-  height: 60%;
-`;
+export const Container = styled.div``;
 export const Form = styled.form``;
 
 export const ContentsBox = styled.div`
@@ -69,7 +66,7 @@ export const TagBox = styled.div`
 export const FlexIcon = styled.div`
   margin-left: 38px;
   position: fixed;
-  top: 581px;
+  top: 600px;
   display: flex;
   flex-direction: column;
   z-index: 4;
@@ -189,4 +186,63 @@ export const HR = styled.hr`
   left: 50px;
   width: 330px;
   border: 1px dashed #596072;
+`;
+
+export const SelDiv = styled.div`
+  position: absolute;
+  top: 672px;
+  left: 145px;
+`;
+export const SelDiv_Sec = styled.div`
+  position: absolute;
+  top: 672px;
+  left: 303px;
+`;
+
+export const StartTitle = styled.div`
+  position: absolute;
+  top: 680px;
+  left: 100px;
+  color: #fbfcff;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+`;
+export const EndTitle = styled.div`
+  position: absolute;
+  top: 680px;
+  left: 260px;
+  color: #fbfcff;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+`;
+export const Online = styled.div`
+  position: absolute;
+  left: 180px;
+  top: 761px;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #fbfcff;
+`;
+export const Offline = styled.div`
+  position: absolute;
+  left: 258px;
+  top: 761px;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #fbfcff;
+`;
+export const SelPersonDiv = styled.div`
+  position: absolute;
+  left: 95px;
+  top: 830px;
 `;
