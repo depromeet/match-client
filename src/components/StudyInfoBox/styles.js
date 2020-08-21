@@ -244,3 +244,8 @@ export const Offline = styled.div`
   line-height: 19px;
   color: #fbfcff;
 `;
+export const SelPersonDiv = styled.div`
+  position: absolute;
+  left: 95px;
+  top: 810px;
+`;
