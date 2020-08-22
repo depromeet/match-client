@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./styles";
-import { useSelected } from "hooks/useSelected";
 import { useForm } from "react-hook-form";
-import { createGlobalStyle } from "../../styles/globalStyle";
+import CreateGlobalStyle from "../../styles/globalStyle";
 import { DatePicker } from "components/DatePicker";
 import Select from "react-select";
 import { TagBox } from "components/TagBox";
@@ -57,9 +56,7 @@ const StudyInfoBoxComponent = () => {
     setValue("reactSelectPerson", selectedOption);
     setReactPersonSelect({ selectedOption });
   };
-  const [values, setReactSelect] = useState({
-    selectedOption: [],
-  });
+
   const [endValues, setReactEndSelect] = useState({
     selectedOption: [],
   });
@@ -129,7 +126,7 @@ const StudyInfoBoxComponent = () => {
 
   return (
     <S.Container>
-      <createGlobalStyle />
+      <CreateGlobalStyle />
       <S.Title>CREATE</S.Title>
       <S.ContentsBox />
 

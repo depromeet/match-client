@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export default createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Maven+Pro&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans&display=swap");
   * {
@@ -23,3 +23,5 @@ export default createGlobalStyle`
     -moz-appearance: none;
   }
 `;
+
+export default GlobalStyle;

@@ -1,9 +1,8 @@
+import React from "react";
+import * as S from "./styles";
 
-import React from 'react';
-import * as S from './styles';
-
-const FloatingButtonComponent = () => {
-	return <S.Container>FloatingButtonComponent</S.Container>;
+const FloatingButtonComponent = ({ text, onClickHandler }) => {
+  return <S.Container onClick={onClickHandler}>{text}</S.Container>;
 };
 
 export default FloatingButtonComponent;
