@@ -2,51 +2,48 @@ import styled from "styled-components";
 import { ReactComponent as PinSVG } from "../../assets/images/pin.svg";
 
 export const Container = styled.div`
-	width: fit-content;
-	height: 18px;
+  width: fit-content;
+  height: ${({ zoom }) => zoom * 0.5 + "px"};
 
-	padding: 4px 10px;
-	background: ${(props) => (props.selected ? "#40FFF4" : "#141313")};
-	color: ${(props) => (props.selected ? "#17181B" : "#FBFCFF")};
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 2px;
+  padding: 6px 6px;
+  background: ${(props) => (props.selected ? "#40FFF4" : "#141313")};
+  color: ${(props) => (props.selected ? "#17181B" : "#FBFCFF")};
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	text-align: center;
-	text-transform: capitalize;
-	transform: perspective(1px) translateZ(0);
+  text-align: center;
+  text-transform: capitalize;
+  transform: perspective(1px) translateZ(0);
 
-	transition: all 150ms ease;
-	cursor: pointer;
+  transition: all 150ms ease;
+  cursor: pointer;
 
-	transform: ${({ selected }) => (selected ? "scale(1.1)" : "")};
-	&:hover {
-		/* background: #40fff4;
-		color: #17181b; */
-		transform: scale(1.1);
-	}
+  transform: ${({ selected }) => (selected ? "scale(1.1)" : "")};
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const Text = styled.p`
-	font-weight: 600;
-	font-size: 10px;
-	line-height: 12px;
+  font-weight: 600;
+  font-size: ${({ zoom }) => zoom + "px"};
+  line-height: ${({ zoom }) => zoom * 1.5 + "px"};
 
-	text-align: center;
-	text-transform: capitalize;
+  text-align: center;
+  text-transform: capitalize;
 `;
 
 export const Pin = styled(PinSVG)`
-	/* align-self: center; */
-	position: fixed;
-	bottom: -20px;
-	left: 0;
-	right: 0;
-	margin: 0px auto;
+  position: fixed;
+  bottom: -${({ zoom }) => zoom * 1.5 + "px"};
+  left: 0;
+  right: 0;
+  margin: 0px auto;
 
-	width: 24px;
-	height: 24px;
+  width: ${({ zoom }) => zoom * 1.5 + "px"};
+  height: ${({ zoom }) => zoom * 1.5 + "px"};
 `;

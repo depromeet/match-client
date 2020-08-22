@@ -2,24 +2,29 @@ import React from "react";
 import * as S from "./styles";
 import { Marker } from "react-map-gl";
 import { useSelected } from "../../hooks/useSelected";
+import { useMap } from "hooks/useMap";
 
 const MarkerComponent = (props) => {
-	const {
-		id,
-		spot: { latitude, longitude },
-		studyName,
-	} = props;
-	const { onSelect, isSelected } = useSelected();
-	const selected = isSelected(props);
+  const { viewport } = useMap();
+  const {
+    spot: { latitude, longitude },
+    studyName,
+  } = props;
+  const { onSelect, isSelected } = useSelected();
+  const selected = isSelected(props);
 
-	return (
-		<Marker latitude={latitude} longitude={longitude}>
-			<S.Container onClick={() => onSelect(props)} selected={selected}>
-				<S.Text>{studyName}</S.Text>
-			</S.Container>
-			<S.Pin />
-		</Marker>
-	);
+  return (
+    <Marker latitude={latitude} longitude={longitude}>
+      <S.Container
+        onClick={() => onSelect(props)}
+        selected={selected}
+        zoom={viewport.zoom}
+      >
+        <S.Text zoom={viewport.zoom}>{studyName}</S.Text>
+      </S.Container>
+      <S.Pin zoom={viewport.zoom} />
+    </Marker>
+  );
 };
 
 export default MarkerComponent;

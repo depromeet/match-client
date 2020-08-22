@@ -9,46 +9,62 @@ import { CheckBox } from "components/CheckBox";
 import { FilterBox } from "components/FilterBox";
 
 const TOKEN =
-	"pk.eyJ1IjoibmFhbW9vbm9vIiwiYSI6ImNrZDc3cDd3cTJud2wyeW15ajdnbnpxancifQ.Cfz9n6pSdx77lOZ0kU3nJQ";
+  "pk.eyJ1IjoibmFhbW9vbm9vIiwiYSI6ImNrZDc3cDd3cTJud2wyeW15ajdnbnpxancifQ.Cfz9n6pSdx77lOZ0kU3nJQ";
 // mapStyle="mapbox://styles/mapbox/dark-v10"
 
 const MapComponent = () => {
-	const { viewport, setViewport } = useMap();
-	const [checked, setChecked] = useState(false);
-	const { study, getStudy } = useStudy();
+  const { viewport, setViewport } = useMap();
+  const [checked, setChecked] = useState(false);
+  const { study, getStudy } = useStudy();
 
-	const renderMarker = () => {
-		return study.map((studyInfo) => (
-			<Marker {...studyInfo} key={studyInfo.id} />
-		));
-	};
+  const renderMarker = () => {
+    return study.map((studyInfo) => (
+      <Marker {...studyInfo} key={studyInfo.id} />
+    ));
+  };
 
-	const onMoveMapHandler = (viewportProps) => {
-		setViewport(viewportProps);
-		if (checked) {
-			const {
-				lngLat: [longitude, latitude],
-			} = viewportProps;
-			getStudy({ latitude, longitude });
-		}
-	};
+  const onMoveMapHandler = (viewportProps) => {
+    setViewport(viewportProps);
+    if (checked) {
+      const {
+        lngLat: [longitude, latitude],
+      } = viewportProps;
+      getStudy({ latitude, longitude });
+    }
+  };
 
-	return (
-		<S.Container>
-			<ReactMapGL
-				onMouseUp={onMoveMapHandler}
-				mapboxApiAccessToken={TOKEN}
-				{...viewport}
-				onViewportChange={setViewport}
-				style={{ position: "relative" }}
-			>
-				{renderMarker()}
-			</ReactMapGL>
-			<CheckBox checked={checked} setChecked={setChecked} />
-			<MainInput />
-			<FilterBox />
-		</S.Container>
-	);
+  return (
+    <S.Container>
+      <ReactMapGL
+        onMouseUp={onMoveMapHandler}
+        mapboxApiAccessToken={TOKEN}
+        {...viewport}
+        onViewportChange={setViewport}
+        style={{ position: "relative" }}
+      >
+        {renderMarker()}
+      </ReactMapGL>
+      <CheckBox checked={checked} setChecked={setChecked} />
+      <MainInput />
+      <FilterBox />
+      <S.ButtonContainer>
+        <S.Button
+          onClick={() =>
+            setViewport({ ...viewport, zoom: viewport.zoom + 0.5 })
+          }
+        >
+          +
+        </S.Button>
+        <S.Button
+          onClick={() =>
+            setViewport({ ...viewport, zoom: viewport.zoom - 0.5 })
+          }
+        >
+          -
+        </S.Button>
+      </S.ButtonContainer>
+    </S.Container>
+  );
 };
 
 export default MapComponent;
