@@ -5,7 +5,22 @@ import { ReactComponent as PinSVG } from "assets/images/pinIcon.svg";
 import { ReactComponent as PersonSVG } from "assets/images/person.svg";
 import { ReactComponent as TagSVG } from "assets/images/tag.svg";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  position: fixed;
+  left: 120px;
+  top: 0;
+  bottom: 0;
+
+  height: 100%;
+  width: 440px;
+
+  background-color: #1d212c;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+`;
+
 export const Form = styled.form``;
 
 export const ContentsBox = styled.div`
