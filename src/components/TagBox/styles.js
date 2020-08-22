@@ -9,8 +9,6 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   position: absolute;
-  /* width: 100%; */
-  /* padding: 0 10px; */
   height: 52px;
   left: 80px;
   top: 900px;
