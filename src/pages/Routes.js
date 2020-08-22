@@ -4,14 +4,14 @@ import { Main } from "./Main";
 import Login from "./Login";
 
 const Routes = () => {
-	return (
-		<BrowserRouter>
-			<Switch>
-				<Route path="/login" component={Login} />
-				<Route path="/*" component={Main} />
-			</Switch>
-		</BrowserRouter>
-	);
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/login" component={Login} />
+        <Route path="/*" component={Main} />
+      </Switch>
+    </BrowserRouter>
+  );
 };
 
 export default Routes;

@@ -47,7 +47,7 @@ const TagBoxComponent = () => {
         )}
         <S.Add onClick={toggleFilterList} />
       </S.Container>
-      ;<S.FilterList showList={showList}>{renderCategory()}</S.FilterList>
+      <S.FilterList showList={showList}>{renderCategory()}</S.FilterList>
     </S.Wrapper>
   );
 };

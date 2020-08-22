@@ -136,14 +136,14 @@ const StudyInfoBoxComponent = () => {
         <S.HR />
         <S.ContentInput />
         <DatePicker />
-        <Select
+        {/* <Select
           className="reactSelect"
           name="filters"
           placeholder="Filters"
           value={values.selectedOption}
           options={options}
           onChange={handleMultiChange}
-        />
+        /> */}
 
         <S.StartTitle>Start</S.StartTitle>
         <S.SelDiv>

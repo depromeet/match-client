@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import * as S from "./styles";
 import { ReactComponent as CheckIcon } from "../../assets/images/check.svg";
 
 const CheckBoxComponent = ({ checked, setChecked }) => {
-  // const [checked, setChecked] = useState(false);
-
   return (
     <S.Container>
       <S.CheckBox
@@ -13,7 +11,7 @@ const CheckBoxComponent = ({ checked, setChecked }) => {
         onChange={() => setChecked(!checked)}
         id="cb"
       />
-      <S.Label for="cb" checked={checked}>
+      <S.Label htmlFor="cb" checked={checked}>
         <CheckIcon />
       </S.Label>
       <S.Title>지도를 움직이며 검색하기</S.Title>
