@@ -10,15 +10,16 @@ export const Container = styled.div`
   left: 120px;
   top: 0;
   bottom: 0;
-
+  /* overflow: auto; */
   height: 100%;
   width: 440px;
-
   background-color: #1d212c;
-  z-index: 1;
-
+  z-index: 2;
   display: flex;
   flex-direction: column;
+  /* &&::-webkit-scrollbar {
+    display: none;
+  } */
 `;
 
 export const Form = styled.form``;
@@ -81,7 +82,7 @@ export const TagBox = styled.div`
 export const FlexIcon = styled.div`
   margin-left: 38px;
   position: fixed;
-  top: 600px;
+  top: 580px;
   display: flex;
   flex-direction: column;
   z-index: 4;
@@ -119,19 +120,14 @@ export const Title = styled.div`
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  font-family: Montserrat;
   color: #fbfcff;
 `;
 export const StudyTitle = styled.div`
   position: absolute;
   left: 50px;
   top: 104px;
-
-  font-family: Noto Sans;
-  font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 22px;
   display: flex;
   align-items: center;
   text-transform: capitalize;
@@ -143,7 +139,6 @@ export const TitleInput = styled.input`
   top: 126px;
   background: #373c4a;
   border-style: none;
-  font-family: Noto Sans;
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
@@ -159,7 +154,6 @@ export const ContentInput = styled.textarea`
   height: 310px;
   left: 50px;
   top: 190px;
-  font-family: Noto Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -178,11 +172,13 @@ export const CreateBtn = styled.button`
   height: 60px;
   left: 22px;
   top: 980px;
-  font-weight: 500;
   background: #40fff4;
   border-radius: 2px;
   border-style: none;
   color: #17181b;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.2px;
 `;
 export const SaveBtn = styled.button`
   position: absolute;
@@ -194,6 +190,9 @@ export const SaveBtn = styled.button`
   border-radius: 2px;
   border-style: none;
   color: #fbfcff;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.2px;
 `;
 export const HR = styled.hr`
   position: absolute;
@@ -205,31 +204,29 @@ export const HR = styled.hr`
 
 export const SelDiv = styled.div`
   position: absolute;
-  top: 672px;
+  top: 658px;
   left: 145px;
 `;
 export const SelDiv_Sec = styled.div`
   position: absolute;
-  top: 672px;
+  top: 658px;
   left: 303px;
 `;
 
 export const StartTitle = styled.div`
   position: absolute;
-  top: 680px;
+  top: 665px;
   left: 100px;
   color: #fbfcff;
-  font-family: Noto Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
 `;
 export const EndTitle = styled.div`
   position: absolute;
-  top: 680px;
+  top: 665px;
   left: 260px;
   color: #fbfcff;
-  font-family: Noto Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -237,8 +234,7 @@ export const EndTitle = styled.div`
 export const Online = styled.div`
   position: absolute;
   left: 180px;
-  top: 761px;
-  font-family: Noto Sans;
+  top: 747px;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -248,8 +244,7 @@ export const Online = styled.div`
 export const Offline = styled.div`
   position: absolute;
   left: 258px;
-  top: 761px;
-  font-family: Noto Sans;
+  top: 747px;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -259,5 +254,5 @@ export const Offline = styled.div`
 export const SelPersonDiv = styled.div`
   position: absolute;
   left: 95px;
-  top: 830px;
+  top: 815px;
 `;

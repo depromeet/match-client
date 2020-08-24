@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./styles";
 import { useForm } from "react-hook-form";
-import CreateGlobalStyle from "../../styles/globalStyle";
+import Font from "./FontStyle";
 import { DatePicker } from "components/DatePicker";
 import Select from "react-select";
 import { TagBox } from "components/TagBox";
@@ -126,7 +126,8 @@ const StudyInfoBoxComponent = () => {
 
   return (
     <S.Container>
-      <CreateGlobalStyle />
+      <Font />
+
       <S.Title>CREATE</S.Title>
       <S.ContentsBox />
 
@@ -136,14 +137,6 @@ const StudyInfoBoxComponent = () => {
         <S.HR />
         <S.ContentInput />
         <DatePicker />
-        {/* <Select
-          className="reactSelect"
-          name="filters"
-          placeholder="Filters"
-          value={values.selectedOption}
-          options={options}
-          onChange={handleMultiChange}
-        /> */}
 
         <S.StartTitle>Start</S.StartTitle>
         <S.SelDiv>
