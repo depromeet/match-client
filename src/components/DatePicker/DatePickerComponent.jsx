@@ -37,9 +37,9 @@ import * as S from "./styles";
 
 const StyledDatePickerWrapper = styled.div`
   position: absolute;
-  left: 148px;
+  left: 142px;
   top: 579px;
-
+  z-index: 32;
   & #end {
     position: relative;
     left: 1px;

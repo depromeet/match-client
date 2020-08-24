@@ -19,6 +19,7 @@ export const EndTitle = styled.div`
   font-size: 16px;
   font-family: Noto Sans;
   font-style: normal;
+  z-index: 32;
 `;
 export const StyledDatePickerWrapper_SEC = styled.div`
   position: absolute;

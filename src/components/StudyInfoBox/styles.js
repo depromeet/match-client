@@ -206,11 +206,13 @@ export const SelDiv = styled.div`
   position: absolute;
   top: 658px;
   left: 145px;
+  z-index: 31;
 `;
 export const SelDiv_Sec = styled.div`
   position: absolute;
   top: 658px;
   left: 303px;
+  z-index: 31;
 `;
 
 export const StartTitle = styled.div`
@@ -255,4 +257,5 @@ export const SelPersonDiv = styled.div`
   position: absolute;
   left: 95px;
   top: 815px;
+  z-index: 30;
 `;
