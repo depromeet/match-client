@@ -58,6 +58,7 @@ export const Add = styled(SearchIcon)`
 export const FilterList = styled.div`
   height: ${({ showList }) => (showList ? "fit-content" : "0px")};
   opacity: ${({ showList }) => (showList ? 1 : 0)};
+  z-index: ${({ showList }) => (showList ? 40 : 1)};
   padding: 10px 2px;
   position: fixed;
   width: 248px;
@@ -68,5 +69,4 @@ export const FilterList = styled.div`
   background: #596072;
   border-radius: 2px;
   transition: all 200ms ease;
-  z-index: 10;
 `;
