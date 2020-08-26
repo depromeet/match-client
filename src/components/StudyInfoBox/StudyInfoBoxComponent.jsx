@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import * as S from "./styles";
 import { useForm } from "react-hook-form";
-import CreateGlobalStyle from "../../styles/globalStyle";
+import Font from "./FontStyle";
 import { DatePicker } from "components/DatePicker";
 import Select from "react-select";
 import { TagBox } from "components/TagBox";
 
-const StudyInfoBoxComponent = () => {
+const StudyInfoBoxComponent = (props) => {
   const { register, handleSubmit, setValue } = useForm();
   const onSubmit = (data) => console.log(data);
+  const calOptions = " ";
+
   const personOptions = [
     { value: "5", label: "최대 5명" },
     { value: "10", label: "최대 10명" },
@@ -41,29 +43,45 @@ const StudyInfoBoxComponent = () => {
     { value: "23:00", label: "23:00" },
   ];
 
-  const handleMultiChange = (selectedOption) => {
-    setValue("reactSelect", selectedOption);
-    setReactSelect({ selectedOption });
-  };
   const [values, setReactSelect] = useState({
     selectedOption: [],
   });
-  const handleMultiEndChange = (selectedOption) => {
-    setValue("reactSelectEndTime", selectedOption);
-    setReactEndSelect({ selectedOption });
-  };
-  const handlePersonChange = (selectedOption) => {
-    setValue("reactSelectPerson", selectedOption);
-    setReactPersonSelect({ selectedOption });
-  };
-
   const [endValues, setReactEndSelect] = useState({
     selectedOption: [],
   });
   const [personValues, setReactPersonSelect] = useState({
     selectedOption: [],
   });
-  //react-select style
+
+  const [calValues, setReactCalSelect] = useState({
+    selectedOption: "",
+  });
+
+  const handleMultiChange = (selectedOption) => {
+    setValue("selectStartTime", selectedOption);
+    setReactSelect({ selectedOption });
+  };
+  const handleMultiEndChange = (selectedOption) => {
+    setValue("selectEndTime", selectedOption);
+    setReactEndSelect({ selectedOption });
+  };
+  const handlePersonChange = (selectedOption) => {
+    setValue("selectPerson", selectedOption);
+    setReactPersonSelect({ selectedOption });
+  };
+  const handleCalChange = (selectedOption) => {
+    setValue("selectCalendar", selectedOption);
+    setReactCalSelect({ selectedOption });
+  };
+
+  useEffect(() => {
+    register({ name: "selectStartTime" });
+    register({ name: "selectEndTime" });
+    register({ name: "selectPerson" });
+    register({ name: "selectCalendar" });
+  }, [register]);
+
+  /*time-select style*/
   const customStyles = {
     singleValue: () => ({
       color: "#FBFCFF",
@@ -96,6 +114,8 @@ const StudyInfoBoxComponent = () => {
       color: state.isSelected ? "#2E8C8E" : "#C4C5CB",
     }),
   };
+
+  /*participants-select style*/
   const customStyles_person = {
     singleValue: () => ({
       color: "#FBFCFF",
@@ -126,32 +146,31 @@ const StudyInfoBoxComponent = () => {
 
   return (
     <S.Container>
-      <CreateGlobalStyle />
+      <Font />
+
       <S.Title>CREATE</S.Title>
       <S.ContentsBox />
 
       <S.StudyTitle>스터디 내용</S.StudyTitle>
       <S.Form onSubmit={handleSubmit(onSubmit)}>
-        <S.TitleInput name="stuff" ref={register} />
+        <S.TitleInput name="title" ref={register} />
         <S.HR />
-        <S.ContentInput />
-        <DatePicker />
-        {/* <Select
-          className="reactSelect"
-          name="filters"
-          placeholder="Filters"
-          value={values.selectedOption}
-          options={options}
-          onChange={handleMultiChange}
-        /> */}
+        <S.ContentInput name="content" ref={register} />
+        <DatePicker
+          name="calendar"
+          startDate={props.startDate}
+          value={calValues.selectCalendar}
+          onChange={handleCalChange}
+          option={calOptions}
+        />
 
         <S.StartTitle>Start</S.StartTitle>
         <S.SelDiv>
           <Select
             className="reactSelect"
-            name="filters"
+            name="start-time"
             placeholder="시간 추가"
-            value={values.selectedOption}
+            value={values.selectStartTime}
             options={options}
             onChange={handleMultiChange}
             styles={customStyles}
@@ -162,9 +181,9 @@ const StudyInfoBoxComponent = () => {
         <S.SelDiv_Sec>
           <Select
             className="reactSelectEndTime"
-            name="filters"
+            name="end-time"
             placeholder="시간 추가"
-            value={endValues.selectedOption}
+            value={endValues.selectEndTime}
             options={options}
             onChange={handleMultiEndChange}
             styles={customStyles}
@@ -177,14 +196,15 @@ const StudyInfoBoxComponent = () => {
         <S.SelPersonDiv>
           <Select
             className="reactSelectPerson"
-            name="filters"
+            name="person"
             placeholder="인원 추가"
-            value={personValues.selectedOption}
+            value={personValues.selectPerson}
             options={personOptions}
             onChange={handlePersonChange}
             styles={customStyles_person}
           />
         </S.SelPersonDiv>
+
         <TagBox />
         <S.CreateBtn type="submit">스터디 열기</S.CreateBtn>
         <S.SaveBtn>임시저장</S.SaveBtn>

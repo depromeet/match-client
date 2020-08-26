@@ -10,11 +10,10 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
   position: absolute;
   height: 52px;
-  left: 80px;
-  top: 900px;
+  left: 82px;
+  top: 882px;
 
   background: #1d212c;
-  box-shadow: 0px 4px 4px rgba(7, 11, 30, 0.14);
 
   padding: 0 10px;
 
@@ -59,21 +58,15 @@ export const Add = styled(SearchIcon)`
 export const FilterList = styled.div`
   height: ${({ showList }) => (showList ? "fit-content" : "0px")};
   opacity: ${({ showList }) => (showList ? 1 : 0)};
-
+  z-index: ${({ showList }) => (showList ? 40 : 1)};
   padding: 10px 2px;
   position: fixed;
   width: 248px;
-
   display: flex;
   flex-wrap: wrap;
-
   left: 210px;
-  bottom: 190px;
-
+  bottom: 200px;
   background: #596072;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
-
   transition: all 200ms ease;
-  z-index: 10;
 `;

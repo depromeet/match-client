@@ -1,41 +1,44 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-	position: relative;
-	height: 60%;
+  position: relative;
+  height: 60%;
 `;
 export const Title = styled.h1`
-	position: sticky;
-	margin: 20px 20px;
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 22px;
-	display: flex;
-	align-items: center;
-	text-transform: uppercase;
+  position: sticky;
+  margin: 20px 20px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
 
-	color: #fbfcff;
+  color: #fbfcff;
 `;
 
 export const StudyContainer = styled.div`
-	height: 100%;
+  height: 100%;
 
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-	padding: 10px 20px;
-	overflow-x: scroll;
+  padding: 10px 20px;
+  overflow-x: scroll;
+  &&::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const BottomBlur = styled.div`
-	position: absolute;
-	bottom: -90px;
-	right: 0;
-	left: 0;
-	height: 70px;
+  position: absolute;
+  bottom: -90px;
+  right: 0;
+  left: 0;
+  height: 70px;
 
-	background: linear-gradient(180deg, #1d212c 0%, rgba(29, 33, 44, 0) 100%);
-	transform: rotate(-180deg);
+  background: linear-gradient(180deg, #1d212c 0%, rgba(29, 33, 44, 0) 100%);
+  transform: rotate(-180deg);
 
-	z-index: 2;
+  z-index: 2;
 `;

@@ -4,6 +4,7 @@ import study from "./study";
 import selected from "./selected";
 import category from "./category";
 import alert from "./alert";
+import attendent from "./attendent";
 
 const rootReducer = combineReducers({
   map,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   selected,
   category,
   alert,
+  attendent,
 });
 
 export default rootReducer;

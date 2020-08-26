@@ -11,6 +11,9 @@ export const Container = styled.div`
   /* overflow-x: scroll; */
   position: absolute;
   bottom: 30px;
+  &&::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const HorizontalBlur = styled.div`
