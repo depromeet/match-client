@@ -128,7 +128,7 @@ const DatePickerComponent = () => {
         setEndDate(null);
       }
 
-      setFocus("endDate");
+      setFocus(endDate);
       setStartDate(newStartDate);
     }
   };
@@ -138,7 +138,8 @@ const DatePickerComponent = () => {
 
     if (!newEndDate) {
       return;
-    } else if (end === null && endDate) {
+    }
+    if (end === null && endDate) {
       setEndDate(null);
       return;
     }
