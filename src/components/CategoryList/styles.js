@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import font from "../../assets/fonts/MontserratMedium.ttf";
 
 export const Container = styled.div`
   /* margin-top: 200px; */
@@ -30,6 +31,11 @@ export const HorizontalBlur = styled.div`
 `;
 
 export const Title = styled.h1`
+  @font-face {
+    font-family: "MontserratMedium";
+    src: url(${font}) format("truetype");
+  }
+  font-family: "MontserratMedium";
   position: absolute;
   bottom: 180px;
   margin: 20px 20px;

@@ -3,6 +3,8 @@ import * as S from "./styles";
 import { StudyList } from "components/StudyList";
 import { CleanLink } from "components/CleanLink";
 import { useLocation } from "react-router-dom";
+import { ReactComponent as faviconSVG } from "assets/images/favicon.svg";
+import favicon from "assets/images/favicon.svg";
 
 const SidebarComponent = () => {
   const { pathname } = useLocation();
@@ -25,11 +27,7 @@ const SidebarComponent = () => {
   };
   return (
     <S.Container>
-      <S.Profile
-        src={
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS60Jmo8r4GCdgL3qfufRTrHGb_5ePanVyKK2ptlNWodyj-xKOGGIA1Io4hlhvO1A_HH3OGxgLeMQ0OOuZg7gdviw&usqp=CAU&ec=45690271"
-        }
-      />
+      <S.Profile src={favicon} alt="favicon" />
       <S.Menu>{renderIcons()}</S.Menu>
       <S.Small>
         <S.Logout onClick={() => alert("logout")} />

@@ -1,23 +1,32 @@
 import styled from "styled-components";
+import fontNoto from "../../assets/fonts/NotoSansKRMedium.otf";
 
 export const StartTitle = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 100px;
   top: 590px;
   color: #fbfcff;
   font-weight: 600;
   font-size: 16px;
-  font-family: Noto Sans;
   font-style: normal;
 `;
 export const EndTitle = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 260px;
   top: 590px;
   color: #fbfcff;
   font-weight: 600;
   font-size: 16px;
-  font-family: Noto Sans;
   font-style: normal;
   z-index: 32;
 `;

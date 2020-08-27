@@ -181,27 +181,8 @@ const DatePickerComponent = () => {
           focusedInput={focus} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
           onFocusChange={(focus) => setFocus(focus)} // PropTypes.func.isRequired,
         />
-
-        {/* <SingleDatePicker
-          placeholder="날짜 추가"
-          numberOfMonths={2}
-          date={startDate}
-          onDateChange={handleOnStartDateChange}
-          focused={focus}
-          onFocusChange={(focus) => setFocus(focus)}
-        /> */}
       </StyledDatePickerWrapper>
       <S.EndTitle>End</S.EndTitle>
-      {/* <S.StyledDatePickerWrapper_SEC>
-         <SingleDatePicker
-          placeholder="날짜 추가"
-          numberOfMonths={2}
-          date={endDate}
-          onDateChange={handleOnEndDateChange}
-          focused={endFocus}
-          onFocusChange={(endFocus) => setEndFocus(endFocus)}
-        /> 
-      </S.StyledDatePickerWrapper_SEC> */}
     </>
   );
 };

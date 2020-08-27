@@ -18,6 +18,8 @@ export const Container = styled.div`
 
 export const ProfileImg = styled.img`
   width: 60px;
+  height: 60px;
+  border-radius: 30px;
   z-index: 3;
 `;
 
@@ -29,9 +31,10 @@ export const Username = styled.div`
   font-family: "MontserratMedium";
   color: #fbfcff;
   z-index: 100;
-  margin-top: 70px;
+  margin-top: 10px;
   font-size: 9px;
   font-weight: bold;
+  align-content: center;
 `;
 // export const Gradient = styled.div`
 //   position: absolute;
