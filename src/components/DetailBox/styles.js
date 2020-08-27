@@ -5,7 +5,8 @@ import { ReactComponent as PersonSVG } from "assets/images/person.svg";
 import { ReactComponent as TagSVG } from "assets/images/tag.svg";
 import { ReactComponent as VectorSVG } from "assets/images/Vector.svg";
 import { ReactComponent as ProfileSVG } from "assets/images/Profile.svg";
-import { ReactComponent as BookmarkSVG } from "assets/images/bookmark.svg";
+import { ReactComponent as BookmarkSVG } from "assets/images/bookmarkOff.svg";
+import font from "../../assets/fonts/MontserratMedium.ttf";
 
 export const Container = styled.div`
   position: fixed;
@@ -163,11 +164,14 @@ export const HostProfile = styled(ProfileSVG)`
   top: 179px;
 `;
 export const StudyHost = styled.div`
+  @font-face {
+    font-family: "MontserratMedium";
+    src: url(${font}) format("truetype");
+  }
+  font-family: "MontserratMedium";
   position: absolute;
   left: 90px;
-  top: 175.42px;
-
-  font-family: Montserrat;
+  top: 180px;
   font-style: normal;
   font-weight: 500;
   font-size: 10px;
@@ -189,11 +193,14 @@ export const StudyContents = styled.div`
 `;
 
 export const DetailTitle = styled.div`
+  @font-face {
+    font-family: "MontserratMedium";
+    src: url(${font}) format("truetype");
+  }
+  font-family: "MontserratMedium";
   position: absolute;
   left: 22px;
   top: 566px;
-
-  font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -242,10 +249,14 @@ export const Tag = styled.div`
 `;
 
 export const AttendeeTitle = styled.div`
+  @font-face {
+    font-family: "MontserratMedium";
+    src: url(${font}) format("truetype");
+  }
+  font-family: "MontserratMedium";
   position: absolute;
   left: 22px;
   top: 835px;
-  font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;

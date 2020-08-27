@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { ReactComponent as LogoIcon } from "../../assets/images/logo.svg";
 
 export const Container = styled.div`
-	display: flex;
+  display: flex;
 `;
 
 export const Logo = styled(LogoIcon)`
-	position: fixed;
+  position: fixed;
 
-	right: 20px;
-	bottom: 20px;
+  right: 20px;
+  bottom: 20px;
 `;
