@@ -17,7 +17,7 @@ const DetailBoxComponent = () => {
       <S.StudyHost>
         Hosted By
         <br />
-        Jeongmin Yun
+        <S.Strong>Jeongmin Yun</S.Strong>
       </S.StudyHost>
       <S.HR />
       <S.StudyContents>[디프만 8기 신입 회원 모집]</S.StudyContents>

@@ -5,9 +5,10 @@ import { useAttendent } from "hooks/useAttendent";
 
 const AttendeeBoxComponent = () => {
   const { attendent } = useAttendent();
+
   const renderAttendent = () => {
     return attendent.map((att, idx) => (
-      <AttendeeList {...JSON.stringify(att)} key={`att-${idx}`} />
+      <AttendeeList {...att} key={`att-${idx}`} />
     ));
   };
   return (

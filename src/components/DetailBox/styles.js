@@ -5,9 +5,16 @@ import { ReactComponent as PersonSVG } from "assets/images/person.svg";
 import { ReactComponent as TagSVG } from "assets/images/tag.svg";
 import { ReactComponent as VectorSVG } from "assets/images/Vector.svg";
 import { ReactComponent as ProfileSVG } from "assets/images/Profile.svg";
-import { ReactComponent as BookmarkSVG } from "assets/images/bookmark.svg";
+import { ReactComponent as BookmarkSVG } from "assets/images/bookmarkOff.svg";
+import font from "../../assets/fonts/MontserratMedium.ttf";
+import fontNoto from "../../assets/fonts/NotoSansKRMedium.otf";
 
 export const Container = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: fixed;
   left: 120px;
   top: 0;
@@ -120,6 +127,11 @@ export const BackIcon = styled(VectorSVG)`
   top: 40px;
 `;
 export const Back = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 60px;
   top: 40px;
@@ -133,6 +145,11 @@ export const Back = styled.div`
   color: #fbfcff;
 `;
 export const StudySubTitle = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 50px;
   top: 104px;
@@ -143,6 +160,11 @@ export const StudySubTitle = styled.div`
   color: #fbfcff;
 `;
 export const StudyTitle = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 50px;
   top: 126px;
@@ -163,18 +185,32 @@ export const HostProfile = styled(ProfileSVG)`
   top: 179px;
 `;
 export const StudyHost = styled.div`
+  @font-face {
+    font-family: "MontserratMedium";
+    src: url(${font}) format("truetype");
+  }
+  font-family: "MontserratMedium";
   position: absolute;
   left: 90px;
-  top: 175.42px;
-
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
+  top: 180px;
   font-size: 10px;
 
   color: #fbfcff;
 `;
+export const Strong = styled.strong`
+  @font-face {
+    font-family: "MontserratMedium";
+    src: url(${font}) format("truetype");
+  }
+  font-family: "MontserratMedium";
+  font-weight: bold;
+`;
 export const StudyContents = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 50px;
   top: 243.42px;
@@ -189,11 +225,14 @@ export const StudyContents = styled.div`
 `;
 
 export const DetailTitle = styled.div`
+  @font-face {
+    font-family: "MontserratMedium";
+    src: url(${font}) format("truetype");
+  }
+  font-family: "MontserratMedium";
   position: absolute;
   left: 22px;
   top: 566px;
-
-  font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -201,6 +240,11 @@ export const DetailTitle = styled.div`
 `;
 
 export const Date = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 75px;
   top: 612px;
@@ -209,6 +253,11 @@ export const Date = styled.div`
 `;
 
 export const Time = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 75px;
   top: 628px;
@@ -218,6 +267,11 @@ export const Time = styled.div`
 `;
 
 export const Pin = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 75px;
   top: 667px;
@@ -226,6 +280,11 @@ export const Pin = styled.div`
   color: #fbfcff;
 `;
 export const Person = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 75px;
   top: 722px;
@@ -234,6 +293,11 @@ export const Person = styled.div`
 `;
 
 export const Tag = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 75px;
   top: 785px;
@@ -242,10 +306,14 @@ export const Tag = styled.div`
 `;
 
 export const AttendeeTitle = styled.div`
+  @font-face {
+    font-family: "MontserratMedium";
+    src: url(${font}) format("truetype");
+  }
+  font-family: "MontserratMedium";
   position: absolute;
   left: 22px;
   top: 835px;
-  font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -253,6 +321,11 @@ export const AttendeeTitle = styled.div`
 `;
 
 export const JoinBtn = styled.button`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   width: 250px;
   height: 60px;
@@ -268,6 +341,11 @@ export const JoinBtn = styled.button`
   z-index: 5;
 `;
 export const ShareBtn = styled.button`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   width: 122px;
   height: 60px;

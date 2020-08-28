@@ -27,16 +27,18 @@ export const Container = styled.div`
 `;
 
 export const Profile = styled.img`
-  width: 54px;
-  height: 54px;
+  /* width: 34px;
+  height: 34px; */
 
-  overflow: hidden;
-  /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS60Jmo8r4GCdgL3qfufRTrHGb_5ePanVyKK2ptlNWodyj-xKOGGIA1Io4hlhvO1A_HH3OGxgLeMQ0OOuZg7gdviw&usqp=CAU&ec=45690271"); */
-  border-radius: 25px;
+  /* overflow: hidden;
+   background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS60Jmo8r4GCdgL3qfufRTrHGb_5ePanVyKK2ptlNWodyj-xKOGGIA1Io4hlhvO1A_HH3OGxgLeMQ0OOuZg7gdviw&usqp=CAU&ec=45690271"); 
+  border-radius: 25px; */
+  z-index: 3;
+  margin-top: 17px;
 `;
 
 export const Menu = styled.div`
-  margin: 50px 0;
+  margin: 30px 0;
 
   width: 80px;
   height: 420px;
@@ -68,20 +70,20 @@ export const Small = styled.div`
 `;
 
 export const Home = styled(HomeIcon)`
-	/* stroke: ${({ selected }) => (selected ? "#40FFF4" : "white")}; */
-	path {
-		stroke: ${({ selected }) => (selected ? "#40FFF4" : "white")};
-	}
+  /* stroke: ${({ selected }) => (selected ? "#40FFF4" : "white")}; */
+  path {
+    stroke: ${({ selected }) => (selected ? "#40FFF4" : "white")};
+  }
 
-	transition: all 300ms ease;
+  transition: all 300ms ease;
 
-	&:hover {
-		transform: scale(1.02);
-		path {
-			stroke: #40FFF4;
-		}
-	}
-	fill: none;
+  &:hover {
+    transform: scale(1.02);
+    path {
+      stroke: #40fff4;
+    }
+  }
+  fill: none;
 `;
 
 export const Plus = styled(PlusIcon)`

@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import fontNoto from "../../assets/fonts/NotoSansKRMedium.otf";
 
 export const Container = styled.div`
   height: 110px;
   width: 110px;
-
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   margin-right: 20px;
   background: ${({ color }) => color};
   border-radius: 2px;

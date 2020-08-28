@@ -4,6 +4,8 @@ import { ReactComponent as TimeSVG } from "assets/images/time.svg";
 import { ReactComponent as PinSVG } from "assets/images/pinIcon.svg";
 import { ReactComponent as PersonSVG } from "assets/images/person.svg";
 import { ReactComponent as TagSVG } from "assets/images/tag.svg";
+import font from "../../assets/fonts/MontserratMedium.ttf";
+import fontNoto from "../../assets/fonts/NotoSansKRMedium.otf";
 
 export const Container = styled.div`
   position: fixed;
@@ -111,6 +113,11 @@ export const TagIcon = styled(TagSVG)`
 `;
 
 export const Title = styled.div`
+  @font-face {
+    font-family: "MontserratMedium";
+    src: url(${font}) format("truetype");
+  }
+  font-family: "MontserratMedium";
   position: absolute;
   top: 40px;
   left: 20px;
@@ -123,6 +130,11 @@ export const Title = styled.div`
   color: #fbfcff;
 `;
 export const StudyTitle = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 50px;
   top: 104px;
@@ -134,6 +146,11 @@ export const StudyTitle = styled.div`
   color: #40fff4;
 `;
 export const TitleInput = styled.input`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 50px;
   top: 126px;
@@ -149,6 +166,11 @@ export const TitleInput = styled.input`
   color: #fbfcff;
 `;
 export const ContentInput = styled.textarea`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   width: 320px;
   height: 310px;
@@ -167,6 +189,11 @@ export const ContentInput = styled.textarea`
 export const StartTime = styled.div``;
 export const EndTime = styled.div``;
 export const CreateBtn = styled.button`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   width: 250px;
   height: 60px;
@@ -181,6 +208,11 @@ export const CreateBtn = styled.button`
   letter-spacing: 0.2px;
 `;
 export const SaveBtn = styled.button`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   width: 122px;
   height: 60px;
@@ -216,15 +248,25 @@ export const SelDiv_Sec = styled.div`
 `;
 
 export const StartTitle = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   top: 665px;
   left: 100px;
   color: #fbfcff;
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 16px;s
 `;
 export const EndTitle = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   top: 665px;
   left: 260px;
@@ -234,6 +276,11 @@ export const EndTitle = styled.div`
   font-size: 16px;
 `;
 export const Online = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 180px;
   top: 747px;
@@ -244,6 +291,11 @@ export const Online = styled.div`
   color: #fbfcff;
 `;
 export const Offline = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 258px;
   top: 747px;
@@ -254,6 +306,11 @@ export const Offline = styled.div`
   color: #fbfcff;
 `;
 export const SelPersonDiv = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   position: absolute;
   left: 95px;
   top: 815px;

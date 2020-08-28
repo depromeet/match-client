@@ -1,13 +1,21 @@
 import styled from "styled-components";
+import font from "../../assets/fonts/MontserratMedium.ttf";
+import fontNoto from "../../assets/fonts/NotoSansKRMedium.otf";
 
 export const Container = styled.div`
   position: relative;
   height: 60%;
 `;
 export const Title = styled.h1`
+  @font-face {
+    font-family: "MontserratMedium";
+    src: url(${font}) format("truetype");
+  }
+  font-family: "MontserratMedium";
+
   position: sticky;
-  margin: 20px 20px;
-  font-weight: bold;
+  margin: 40px 20px;
+  font-weight: 600;
   font-size: 18px;
   line-height: 22px;
   display: flex;
@@ -19,11 +27,16 @@ export const Title = styled.h1`
 
 export const StudyContainer = styled.div`
   height: 100%;
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
 
   display: flex;
   flex-direction: column;
 
-  padding: 10px 20px;
+  padding: 0px 20px;
   overflow-x: scroll;
   &&::-webkit-scrollbar {
     display: none;
@@ -32,7 +45,7 @@ export const StudyContainer = styled.div`
 
 export const BottomBlur = styled.div`
   position: absolute;
-  bottom: -90px;
+  bottom: -105px;
   right: 0;
   left: 0;
   height: 70px;

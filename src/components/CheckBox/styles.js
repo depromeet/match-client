@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as checkIcon } from "../../assets/images/check.svg";
+import fontNoto from "../../assets/fonts/NotoSansKRMedium.otf";
 
 export const Container = styled.div`
   position: fixed;
@@ -50,8 +51,13 @@ export const Label = styled.label`
 `;
 
 export const Title = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   line-height: 22px;
 

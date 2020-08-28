@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import font from "../../assets/fonts/MontserratMedium.ttf";
 
 export const Container = styled.div`
-  width: 90px;
+  width: 100px;
   height: 110px;
   margin-right: 20px;
   border-radius: 2px;
@@ -15,15 +16,25 @@ export const Container = styled.div`
   z-index: 1;
 `;
 
-export const ProfileImg = styled.div`
+export const ProfileImg = styled.img`
   width: 60px;
+  height: 60px;
+  border-radius: 30px;
   z-index: 3;
 `;
 
 export const Username = styled.div`
+  @font-face {
+    font-family: "MontserratMedium";
+    src: url(${font}) format("truetype");
+  }
+  font-family: "MontserratMedium";
   color: #fbfcff;
   z-index: 100;
-  margin-top: auto;
+  margin-top: 10px;
+  font-size: 9px;
+  font-weight: bold;
+  align-content: center;
 `;
 // export const Gradient = styled.div`
 //   position: absolute;
