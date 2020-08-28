@@ -74,7 +74,7 @@ export const Home = styled(HomeIcon)`
   path {
     stroke: ${({ selected }) => (selected ? "#40FFF4" : "white")};
   }
-
+  stroke: #40fff4;
   transition: all 300ms ease;
 
   &:hover {

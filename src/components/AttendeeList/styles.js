@@ -3,7 +3,7 @@ import font from "../../assets/fonts/MontserratMedium.ttf";
 
 export const Container = styled.div`
   width: 100px;
-  height: 110px;
+  height: 90px;
   margin-right: 20px;
   border-radius: 2px;
 

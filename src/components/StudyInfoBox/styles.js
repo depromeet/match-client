@@ -164,6 +164,9 @@ export const TitleInput = styled.input`
   align-items: center;
   text-transform: capitalize;
   color: #fbfcff;
+  &:focus {
+    outline: 0;
+  }
 `;
 export const ContentInput = styled.textarea`
   @font-face {
@@ -184,6 +187,9 @@ export const ContentInput = styled.textarea`
   color: #fbfcff;
   background-color: #373c4a;
   border-style: none;
+  &:focus {
+    outline: 0;
+  }
 `;
 
 export const StartTime = styled.div``;
@@ -231,7 +237,7 @@ export const HR = styled.hr`
   top: 170px;
   left: 50px;
   width: 330px;
-  border: 1px dashed #596072;
+  border: 1px solid #596072;
 `;
 
 export const SelDiv = styled.div`
@@ -259,7 +265,7 @@ export const StartTitle = styled.div`
   color: #fbfcff;
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;s
+  font-size: 16px;
 `;
 export const EndTitle = styled.div`
   @font-face {

@@ -23,7 +23,7 @@ export const HorizontalBlur = styled.div`
   left: 482px;
   bottom: 30px;
   height: 150px;
-  width: 30px;
+  width: 32px;
 
   background: linear-gradient(90deg, #1d212c 0%, rgba(29, 33, 44, 0) 100%);
   transform: rotate(-180deg);

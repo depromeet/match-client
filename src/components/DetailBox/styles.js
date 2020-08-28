@@ -32,16 +32,16 @@ export const Container = styled.div`
 `;
 
 export const ContentsBox = styled.div`
-  position: absolute;
+  position: relative;
   width: 390px;
   height: 470px;
   left: 20px;
-  top: 80px;
+  top: 50px;
   background: #373c4a;
   border-radius: 2px;
 `;
 export const FlexBox = styled.div`
-  margin: 590px 21px;
+  margin: 70px 21px;
   display: flex;
   flex-direction: column;
 `;
@@ -81,8 +81,8 @@ export const TagBox = styled.div`
 
 export const FlexIcon = styled.div`
   margin-left: 27.5px;
-  position: fixed;
-  top: 618px;
+  position: relative;
+  top: -266.5px;
   display: flex;
   flex-direction: column;
   z-index: 4;
@@ -94,9 +94,9 @@ export const DateIcon = styled(TimeSVG)`
   margin-left: 2px;
 `;
 export const Bookmark = styled(BookmarkSVG)`
-  position: absolute;
-  top: 108px;
-  left: 347px;
+  position: relative;
+  top: 110px;
+  left: 350px;
   z-index: 5;
   fill: #fbfcff;
   stroke: #fbfcff;
@@ -150,12 +150,11 @@ export const StudySubTitle = styled.div`
     src: url(${fontNoto}) format("truetype");
   }
   font-family: "NotoSansKRMedium";
-  position: absolute;
-  left: 50px;
-  top: 104px;
+  position: relative;
+  left: 30px;
+  top: 25px;
   font-weight: SemiBold;
   font-size: 16px;
-  display: flex;
   align-items: center;
   color: #fbfcff;
 `;
@@ -165,10 +164,9 @@ export const StudyTitle = styled.div`
     src: url(${fontNoto}) format("truetype");
   }
   font-family: "NotoSansKRMedium";
-  position: absolute;
-  left: 50px;
-  top: 126px;
-  background: #373c4a;
+  position: relative;
+  left: 30px;
+  top: 25px;
   border-style: none;
   font-style: normal;
   font-weight: 800;
@@ -180,9 +178,9 @@ export const StudyTitle = styled.div`
   color: #fbfcff;
 `;
 export const HostProfile = styled(ProfileSVG)`
-  position: absolute;
-  left: 52px;
-  top: 179px;
+  position: relative;
+  left: 32px;
+  top: 40px;
 `;
 export const StudyHost = styled.div`
   @font-face {
@@ -190,9 +188,9 @@ export const StudyHost = styled.div`
     src: url(${font}) format("truetype");
   }
   font-family: "MontserratMedium";
-  position: absolute;
-  left: 90px;
-  top: 180px;
+  position: relative;
+  left: 70px;
+  top: 9px;
   font-size: 10px;
 
   color: #fbfcff;
@@ -211,9 +209,9 @@ export const StudyContents = styled.div`
     src: url(${fontNoto}) format("truetype");
   }
   font-family: "NotoSansKRMedium";
-  position: absolute;
-  left: 50px;
-  top: 243.42px;
+  position: relative;
+  left: 32px;
+  top: 40px;
   width: 320px;
   font-style: normal;
   font-weight: normal;
@@ -231,9 +229,9 @@ export const DetailTitle = styled.div`
     src: url(${font}) format("truetype");
   }
   font-family: "MontserratMedium";
-  position: absolute;
+  position: relative;
   left: 22px;
-  top: 566px;
+  top: 70px;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -246,9 +244,9 @@ export const Date = styled.div`
     src: url(${fontNoto}) format("truetype");
   }
   font-family: "NotoSansKRMedium";
-  position: absolute;
+  position: relative;
   left: 75px;
-  top: 612px;
+  top: -460px;
   font-size: 12px;
   color: #fbfcff;
 `;
@@ -259,9 +257,9 @@ export const Time = styled.div`
     src: url(${fontNoto}) format("truetype");
   }
   font-family: "NotoSansKRMedium";
-  position: absolute;
+  position: relative;
   left: 75px;
-  top: 628px;
+  top: -462px;
   font-weight: normal;
   font-size: 12px;
   color: #fbfcff;
@@ -273,9 +271,9 @@ export const Pin = styled.div`
     src: url(${fontNoto}) format("truetype");
   }
   font-family: "NotoSansKRMedium";
-  position: absolute;
+  position: relative;
   left: 75px;
-  top: 667px;
+  top: -440px;
   font-weight: normal;
   font-size: 12px;
   color: #fbfcff;
@@ -286,9 +284,9 @@ export const Person = styled.div`
     src: url(${fontNoto}) format("truetype");
   }
   font-family: "NotoSansKRMedium";
-  position: absolute;
+  position: relative;
   left: 75px;
-  top: 722px;
+  top: -420px;
   font-size: 12px;
   color: #fbfcff;
 `;
@@ -299,9 +297,9 @@ export const Tag = styled.div`
     src: url(${fontNoto}) format("truetype");
   }
   font-family: "NotoSansKRMedium";
-  position: absolute;
+  position: relative;
   left: 75px;
-  top: 785px;
+  top: -390px;
   font-size: 12px;
   color: #fbfcff;
 `;
@@ -312,26 +310,29 @@ export const AttendeeTitle = styled.div`
     src: url(${font}) format("truetype");
   }
   font-family: "MontserratMedium";
-  position: absolute;
+  position: relative;
   left: 22px;
-  top: 835px;
+  top: -350px;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   color: #fbfcff;
 `;
-
+export const FlexBtn = styled.div`
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  margin-left: 20px;
+  margin-bottom: 30px;
+`;
 export const JoinBtn = styled.button`
   @font-face {
     font-family: "NotoSansKRMedium";
     src: url(${fontNoto}) format("truetype");
   }
   font-family: "NotoSansKRMedium";
-  position: absolute;
   width: 250px;
   height: 60px;
-  left: 22px;
-  top: 980px;
   background: #40fff4;
   border-radius: 2px;
   border-style: none;
@@ -340,6 +341,10 @@ export const JoinBtn = styled.button`
   font-size: 20px;
   letter-spacing: 0.2px;
   z-index: 5;
+  cursor: pointer;
+  &:focus {
+    outline: 0;
+  }
 `;
 export const ShareBtn = styled.button`
   @font-face {
@@ -347,11 +352,10 @@ export const ShareBtn = styled.button`
     src: url(${fontNoto}) format("truetype");
   }
   font-family: "NotoSansKRMedium";
-  position: absolute;
+  position: sticky;
   width: 122px;
   height: 60px;
-  left: 280px;
-  top: 980px;
+  margin-left: 10px;
   background: #373c4a;
   border-radius: 2px;
   border-style: none;
@@ -362,9 +366,9 @@ export const ShareBtn = styled.button`
   z-index: 5;
 `;
 export const HR = styled.hr`
-  position: absolute;
-  top: 223px;
-  left: 50px;
+  position: relative;
+  top: 25px;
+  left: 2px;
   width: 330px;
   border: 1px solid #596072;
   z-index: 5;
@@ -375,4 +379,14 @@ export const List = styled.div`
   margin-top: auto;
 
   padding-left: 5px;
+`;
+export const ScrollBox = styled.div`
+  &&::-webkit-scrollbar {
+    display: none;
+  }
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  display: block;
+  height: 100%;
+  width: 100%;
 `;

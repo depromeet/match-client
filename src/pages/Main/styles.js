@@ -8,6 +8,6 @@ export const Container = styled.div`
 export const Logo = styled(LogoIcon)`
   position: fixed;
 
-  right: 20px;
-  bottom: 20px;
+  right: 75px;
+  bottom: 30px;
 `;

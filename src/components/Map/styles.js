@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   margin-left: auto;
-
+  /* position: absolute;
+  left: 560px;
+  top: 0px; */
   display: relative;
 `;
 

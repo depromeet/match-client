@@ -29,9 +29,8 @@ const SidebarComponent = () => {
     <S.Container>
       <S.Profile src={favicon} alt="favicon" />
       <S.Menu>{renderIcons()}</S.Menu>
-      <S.Small>
-        <S.Logout onClick={() => alert("logout")} />
-      </S.Small>
+
+      {/* 로그인 진입 시에만 활성화 <S.Small>{<S.Logout onClick={() => alert("logout")} />}</S.Small> */}
     </S.Container>
   );
 };
