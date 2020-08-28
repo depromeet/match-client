@@ -214,6 +214,7 @@ export const StudyContents = styled.div`
   position: absolute;
   left: 50px;
   top: 243.42px;
+  width: 320px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
