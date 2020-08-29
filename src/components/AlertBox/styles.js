@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import fontNoto from "../../assets/fonts/NotoSansKRMedium.otf";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -33,6 +34,11 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.div`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
@@ -43,13 +49,18 @@ export const Text = styled.div`
   align-items: center;
   text-align: center;
   text-transform: capitalize;
-
+  margin-top: 30px;
   /* text_white */
 
   color: #fbfcff;
 `;
 
 export const Button = styled.button`
+  @font-face {
+    font-family: "NotoSansKRMedium";
+    src: url(${fontNoto}) format("truetype");
+  }
+  font-family: "NotoSansKRMedium";
   width: 160px;
   height: 60px;
 
@@ -66,8 +77,12 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   text-transform: capitalize;
-
+  border-style: none;
   color: #17181b;
+  &:focus {
+    outline: 0;
+  }
+  cursor: pointer;
 `;
 
 export const ButtonText = styled.div``;

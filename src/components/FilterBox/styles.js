@@ -13,7 +13,7 @@ export const Container = styled.div`
   /* width: 100%; */
   /* padding: 0 10px; */
   height: 52px;
-  left: 1390px;
+  left: 1350px;
   top: 32px;
 
   background: #070b1e;

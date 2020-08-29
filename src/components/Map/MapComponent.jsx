@@ -32,6 +32,12 @@ const MapComponent = () => {
       getStudy({ latitude, longitude });
     }
   };
+  const mapStyle = {
+    // position: "relative";
+    position: "relative",
+    bottom: "0px",
+    left: "0px",
+  };
 
   return (
     <S.Container>
@@ -40,7 +46,7 @@ const MapComponent = () => {
         mapboxApiAccessToken={TOKEN}
         {...viewport}
         onViewportChange={setViewport}
-        style={{ position: "relative" }}
+        style={mapStyle}
       >
         {renderMarker()}
       </ReactMapGL>

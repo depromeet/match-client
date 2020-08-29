@@ -15,6 +15,7 @@ const MainTabComponent = ({ match }) => {
           <>
             <StudyList />
             <CategoryList />
+            <S.FontBlur />
           </>
         )}
       />

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as BookmarkIcon } from "../../assets/images/bookmark.svg";
+import { ReactComponent as BookmarkIcon } from "../../assets/images/bookmarkLine.svg";
 
 export const Container = styled.div`
   width: 340px;

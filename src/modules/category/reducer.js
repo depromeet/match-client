@@ -1,5 +1,6 @@
 import { createReducer } from "typesafe-actions";
 import { FETCH_CATEGORY } from "./actions";
+import { ReactComponent as UIX } from "assets/images/UIX.svg";
 
 const colorMapper = {
   DESIGN: "#16DAF4",
@@ -18,19 +19,19 @@ const initialState = [
   },
   {
     id: 2,
-    abbr: "GUI",
-    nameEng: "GUI",
-    nameKr: "디자인",
-    category: "DESIGN",
-    counts: 126,
+    abbr: "Fr",
+    nameEng: "FRONT END",
+    nameKr: "프론트",
+    category: "DEVELOP",
+    counts: 30,
   },
   {
     id: 3,
-    abbr: "BX",
-    nameEng: "BX",
-    nameKr: "브랜딩",
-    category: "DESIGN",
-    counts: 25,
+    abbr: "Bu",
+    nameEng: "BUSINESS",
+    nameKr: "비즈니스",
+    category: "BUSINESS",
+    counts: 30,
   },
   {
     id: 4,
@@ -42,14 +43,23 @@ const initialState = [
   },
   {
     id: 5,
-    abbr: "Bu",
-    nameEng: "BUSINESS",
-    nameKr: "비즈니스",
-    category: "BUSINESS",
-    counts: 30,
+    abbr: "GUI",
+    nameEng: "GUI",
+    nameKr: "디자인",
+    category: "DESIGN",
+    counts: 126,
   },
   {
     id: 6,
+    abbr: "BX",
+    nameEng: "BX",
+    nameKr: "브랜딩",
+    category: "DESIGN",
+    counts: 25,
+  },
+
+  {
+    id: 7,
     abbr: "Wr",
     nameEng: "WRITING",
     nameKr: "라이팅",
@@ -57,18 +67,10 @@ const initialState = [
     counts: 29,
   },
   {
-    id: 7,
+    id: 8,
     abbr: "Ba",
     nameEng: "BACK END",
     nameKr: "백엔드",
-    category: "DEVELOP",
-    counts: 30,
-  },
-  {
-    id: 8,
-    abbr: "Fr",
-    nameEng: "FRONT END",
-    nameKr: "프론트",
     category: "DEVELOP",
     counts: 30,
   },

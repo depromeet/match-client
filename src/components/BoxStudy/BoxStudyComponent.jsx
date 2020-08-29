@@ -31,7 +31,7 @@ const BoxStudyComponent = (props) => {
           onClick={() => onSelect(props)}
           selected={selected}
         >
-          <S.Scehdule>{`${start} - ${end}`}</S.Scehdule>
+          <S.Scehdule>{`${start} ${end}`}</S.Scehdule>
           <S.Title>{studyName}</S.Title>
           <S.Paticipant>{renderParticipant()}</S.Paticipant>
           <S.Bookmark selected={selected} marked={props.id % 2} />
